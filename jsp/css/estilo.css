@@ -1,0 +1,204 @@
+
+body {/*estilo de color de fondo, margenes de 0 y contenido centrado en la pagina*/
+
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	
+}
+
+.notification {
+                position: relative;
+                margin: 0 0 15px 0;
+                padding: 0;
+                border: 1px solid;
+                background-position: 10px 11px !important;
+                background-repeat: no-repeat !important;
+                font-size: 12px;
+                width: 100%;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+				border-radius: 6px;                
+}
+
+.information {
+                background: #dbe3ff url('../img/information.png');
+                border-color: #a2b4ee;
+                color: #585b66;
+}
+
+.notification div {
+                display:block;
+                font-style:normal;
+                padding: 3px 10px 5px 36px;
+                line-height: 2.5em;
+}
+
+.notification_3 {
+                position: relative;
+                margin: 0 0 15px 0;
+                padding: 0;
+                border: 1px solid;
+                background-position: 10px 11px !important;
+                background-repeat: no-repeat !important;
+                font-size: 12px;
+                width: 100%;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+				border-radius: 6px;                
+}
+
+.information_3 {
+                background: #FFFCDC url('../img/cross_circle.png');
+				
+                border-color: #a2b4ee;
+                color: #585b66;
+}
+
+.notification_3 div {
+                display:block;
+                font-style:normal;
+                padding: 3px 10px 5px 36px;
+                line-height: 2.5em;
+}
+.text_file {/*estilo para cajas de texto*/
+		background-color: #FFFFFF; 
+		color: #000000; 
+		font-family: Arial, Helvetica, sans-serif;   
+		font-size: 11px; 
+		border: 1px solid #999999;
+}
+.ver {/*estilo para cajas de texto*/
+		background-color: #FFFFFF; 
+		color: #000000; 
+		font-family: Arial, Helvetica, sans-serif;   
+		font-size: 11px; 
+		
+}
+.botones {/*estilo para botones*/
+
+		background-color: #005AAB; 
+		border: 0 none; 
+		color: #FFFFFF;
+		cursor: pointer; 
+		font-family: arial,helvetica,sans-serif; 
+		font-size: 11px; 
+		font-weight: bold; 
+		height: 20px;  
+		padding-bottom: 3px;
+		 margin-right: 2px;
+		/*background-color: #F0F0F0; 
+		color: #000000; 
+		font-family: Arial, Helvetica, sans-serif; 
+		font-size: 11px; 
+		border: 1px solid #999999;*/
+}
+.botones:hover {/*estilo para botones*/
+
+		background-color: #CCC; 
+		border: 0 none; 
+		color: #005AAB;
+		cursor: pointer; 
+		font-family: arial,helvetica,sans-serif; 
+		font-size: 11px; 
+		font-weight: bold; 
+		height: 20px;  
+		padding-bottom: 3px;
+		 margin-right: 2px;
+		/*background-color: #F0F0F0; 
+		color: #000000; 
+		font-family: Arial, Helvetica, sans-serif; 
+		font-size: 11px; 
+		border: 1px solid #999999;*/
+}
+.combos {/*estilo para combos*/
+		
+		font-family: Arial, Helvetica, sans-serif;  	
+		font-size: 10px;
+}
+.text_negro {/*estilo textos de titulos secundarios y contenidos de celda*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+.text_rojo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;	
+	font-variant: normal;
+	color: #FF0000;
+}
+.text_blanco {/*estilo textos titulos de tabla*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: bold;
+	font-variant: normal;
+	padding:1px;
+	color: #FFFFFF;
+}
+.text_mensaje {/*estilo textos mensajes*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000000;
+}
+.text_titulo_menu {/*estilo textos titulos menu de iconos*/
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #DF8600;
+}
+.fondo_tabla {/*estilo marco tabla contenedora general e interior*/
+background-color: #104070;
+}
+.fondo_celda_1 {/*fondo primera celda - titulos de tabla generalmente*/
+background-color: #104070;
+}
+.fondo_celda_2 {/*fondo segunda celda - titulos secundarios generalmente*/
+background-color: #D8ECF7;
+
+}
+.fondo_celda_3 {/*fondo tablas interiores y tercera celda - contenidos generalmente - color blanco en todos los casos*/
+background-color: #FFFFFF;
+}
+.fondo_celda_4 {/*fondo cuarta celda - listados generalmente*/
+background-color: #F4F4F4;
+}
+.fondo_celda_5 {/*fondo cuarta celda - listados secundarios generalmente*/
+background-color: #FFFFFF;
+}
+.tabla_impresion {/*estilo borde tabla para impresion*/
+	border-collapse:collapse; 
+	border:none;
+}
+.tabla_estadistica_1 {/*estilo de color de fondo y borde de tabla estadistica 1*/
+	background-color: #FAEDD9;
+	border: 1px;
+	border-style: solid;
+	height: 25px;
+	border-color: #DF8600;
+}
+.tabla_estadistica_2 {/*estilo de color de fondo y borde de tabla estadistica 2*/
+	background-color: #F5DAB2;
+	border: 1px;
+	border-style: solid;
+	height: 25px;
+	border-color: #DF8600;
+}
+.tabla_estadistica_3 {/*estilo de color de fondo y borde de tabla estadistica 3*/
+	background-color: #ECB666;
+	border: 1px;
+	border-style: solid;
+	height: 25px;
+	border-color: #DF8600;
+}

@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>1.2</jsp-version>
+   <short-name>sj</short-name>
+
+   <tag>
+
+      <name>Report</name>
+      <tag-class>com.solucionjava.tag.report.Report</tag-class>
+      <body-content>JSP</body-content>
+      <display-name>Name for Report</display-name>
+      <description><![CDATA[Create reports giving just the SQL statement. Max 20 columns.]]></description>
+
+      <attribute>
+         <name>col1</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col10</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col2</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col3</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col4</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col5</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col6</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col7</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col8</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col9</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>cols</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>trOnClick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>nullIsTotal</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col1Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col2Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col3Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col4Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col5Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col6Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col7Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col8Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col9Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col10Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col11Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col12Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col13Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col14Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col15Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col16Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col17Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col18Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col19Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col20Suf</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>curPage</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>recalc</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>totRows</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>rowsPerPage</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>pageURL</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col11</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col12</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col13</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col14</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col15</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col16</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col17</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col18</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col19</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col20</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col1Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col2Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col3Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col4Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col5Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col6Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col7Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col8Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col9Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col10Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col11Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col12Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col13Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col14Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col15Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col16Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col17Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col18Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col19Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>col20Style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>dbObjectName</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>leyenda</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>tableWidth</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>debug</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>cssClass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>tableAlign</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>tableClass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>OpenFlashChart</name>
+      <tag-class>com.solucionjava.tag.ofc.OpenFlashChartTag</tag-class>
+      <body-content>JSP</body-content>
+      <display-name>Open-Flash-Chart Library</display-name>
+      <description><![CDATA[Open-Flash-Chart Library class]]></description>
+
+      <attribute>
+         <name>width</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>height</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_min</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_max</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_min</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_max</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_steps</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>title</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>title_style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>occurence</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>x_offset</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_tick_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>y2_max</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y2_min</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_axis_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_axis_3d</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_grid_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_axis_steps</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>y_axis_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_grid_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y2_axis_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_label_style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_label_style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_label_style_right</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_legend</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>x_legend_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>x_legend_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_legend</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_legend_right</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bg_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bg_image</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>inner_bg_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>inner_bg_colour_2</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>inner_bg_angle</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>tool_tip</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>y_format</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>num_decimals</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>is_fixed_num_decimals_forced</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>is_decimal_separator_comma</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>is_thousand_separator_disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_width</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>line_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>line_circles</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>line_dot_width</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_dot_dot_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_dot_font_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_hollow_width</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_hollow_dot_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line_hollow_font_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>numberOfDataSets</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>set1Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set2Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set3Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set4Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set5Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set6Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set7Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set8Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set9Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set10Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set11Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>set12Value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line2_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line3_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line4_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line5_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line6_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line7_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line8_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line9_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line10_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      
+      <attribute>
+         <name>line11_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line11_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line11_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line11_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line11_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      
+      <attribute>
+         <name>line12_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line12_dot_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line12_dot_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line12_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>line12_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_alpha</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_line_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_label_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_gradient</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_border_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>pie_colours</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_width</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_dot_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_alpha</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_font_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>area_hollow_fill_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_alpha</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_offset</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_colour_outline</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>bar2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar2_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar3_text</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_filled_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_filled2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_filled3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_sketch_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_sketch2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_sketch3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_glass_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_glass2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_glass3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_fade_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_fade2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_fade3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_3D_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_3D2_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>bar_3D3_colour</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>dbObjectName</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>DynamicList</name>
+      <tag-class>com.solucionjava.tag.report.DynamicList</tag-class>
+      <body-content>JSP</body-content>
+      <display-name>Name for DynamicList</display-name>
+      <description><![CDATA[Description for DynamicList]]></description>
+
+      <attribute>
+         <name>campo</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>div</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>valor</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>no_valor</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>maxLength</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>otro</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>form</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>ajaxUrl</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>ajaxSQL</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>minChar</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.Integer</type>
+
+      </attribute>
+      <attribute>
+         <name>getSql</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>getSelectionId</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>autoSelect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>nolimit</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>whereClause</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>localSQL</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+           <type>java.lang.String</type>
+
+      </attribute>
+      <attribute>
+         <name>tabindex</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+           <type>java.lang.Integer</type>
+      </attribute>
+      <attribute>
+         <name>inputClass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+           <type>java.lang.String</type>
+      </attribute>
+      <attribute>
+         <name>menosUnoEsVacio</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+           <type>java.lang.String</type>
+      </attribute>
+
+   </tag>
+
+</taglib>

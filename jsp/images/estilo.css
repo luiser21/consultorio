@@ -1,0 +1,347 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	/*background-image:url(../images/navidad.png);
+	background-repeat:repeat-x;*/
+	background-color:#f0f0f0;
+	margin:0 0 20px 0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+	
+}
+img{
+	border:none;
+}
+
+
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color:#000000}
+A:active {text-decoration: none; color:#000000}
+A:hover {text-decoration:none; color: #000000;}
+
+#unipamplona{
+	border:none;
+	margin-top:-145px;
+	margin-right:25px;
+}
+#bgheader{
+	border:none;
+	margin-top:-160px;
+	margin-left:450px;
+	
+}
+
+#content {
+width:960px;
+	margin:0 auto;
+	background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 20px #BBBBBB;
+}
+/*
+#header {
+	height:110px;
+	background-image:url(bgheader.png);
+	background-repeat:no-repeat;
+	background-position:450px -50px;
+	padding-top:20px;
+} */
+
+
+
+ #header_int_sup ul {
+	margin:0px 0 0 0;
+	padding:0;
+	list-style:none;
+}
+ #header_int_sup ul li {
+	text-align:center;
+}
+#header_int_sup ul li.sitio1 {
+	font-size:18px;
+	font-weight:bold;
+}
+#header_int_sup ul li.sitio2 {
+	font-size:12px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+ #header_int_sup ul li.sitio3 {
+	font-size:14px;
+}
+#header #unipamplona {
+	float:right;
+}
+#botonera {
+	height:30px;
+	padding-top:25px;
+}
+#botonera ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#botonera ul li{
+	float:left;
+}
+
+#botonera ul li a{
+	display:block;
+	color:#fff;
+	margin-right:10px;
+	height:23px;
+	padding:7px 5px 0 20px;
+	background-image:url(topicons.png);
+	background-repeat:no-repeat;
+	text-decoration:none;
+	background-position:0 2px;
+}
+#botonera ul li a:hover{
+	color:#fc0;
+}
+#botonera ul li.inicio a:hover{
+	background-position:0 -73px;
+}
+#botonera ul li.transacciones a{
+	background-position:0 -23px;
+}
+#botonera ul li.transacciones a:hover{
+	background-position:0 -98px;
+}
+#botonera ul li.correo a{
+	background-position:0 -48px;
+}
+#botonera ul li.correo a:hover{
+	background-position:0 -123px;
+}
+#menulateral {
+	width:200px;
+	margin:30px;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px !important;
+}
+#menulateral ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#menulateral ul li a{
+	display:block;
+	padding:5px;
+	color:#333;
+	text-decoration:none;
+	border-bottom:1px dashed #104070;
+	text-decoration:none;
+}
+
+#menulateral ul li a:hover{
+	background-color:#f0f0f0;
+}
+#noticiappal{
+	width:670px;
+	height:320px;
+	color:#fff;
+	margin:30px 30px 30px 0;
+        text-align:justify;
+}
+#noticiappal #sombra{
+	width:250px;
+	height:280px;
+	padding:20px;
+	
+        text-align:justify;
+}
+#noticiappal #sombra h1{
+	font-family:"trebuchet MS", tahoma, arial;
+	font-size:24px;
+	margin:0;
+	padding:0;
+	color:#fc0;
+}
+#noticiappal #sombra p{
+	line-height:16px;
+}
+#noticiappal #sombra a{
+	font-weight:bold;
+	text-decoration:none;
+	color:#fff;
+}
+
+#noticiappal #sombra a:hover{
+	text-decoration:underline;
+        color:#fc0;
+}
+#avisos{
+	width:485px;
+	float:left;
+	margin-right:20px;
+}
+#avisos .avisostitulo{
+	font-family:"trebuchet MS", tahoma, arial;
+	color:#036;
+	font-size:24px;
+	margin:0 0 10px 0;
+	padding:0;
+}
+#avisos .avisoscontenido{
+	padding-left:20px;
+}
+#avisos .avisoscontenido ul{
+	margin:0;
+	padding:0 20px 0 0;
+	list-style:none;
+	height:200px;
+	overflow:auto;
+}
+#avisos .avisoscontenido ul li{
+	background-repeat:no-repeat;
+	background-position:0 5px;
+	padding-left:15px;
+	margin-bottom:10px;
+	text-align:justify;
+}
+#enlacesderecha{
+	float:left;
+	width:160px;
+	border-left:1px dashed #ccc;
+	padding-left:10px;
+}
+#enlacesderecha ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#enlacesderecha ul li{
+	float:left;
+}
+
+#enlacesderecha ul li a{
+	display:block;
+	width:70px;
+	height:70px;
+	border:none;
+	margin:0 10px 10px 0;
+}
+#footer {
+	background-repeat:no-repeat;
+	/*padding:50px 0 0 30px;
+	margin:0 0 10px 0;
+	height:80px;*/
+	border-bottom:2px solid #036;
+}
+#footer ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#footer ul li {
+	margin:0 10px;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	display:block;
+	float:left;
+}
+#pagina_contenido {
+	margin:30px 30px 30px 0;
+	padding:0 0 0 30px;
+	border-left:5px solid #ccc;
+	
+}
+#pagina_contenido2 {
+	margin:30px 30px 30px 0;
+	padding:0 0 0 30px;
+	border-left:5px solid #ccc;
+	float:right;
+	width:650px;
+}
+.actualizacion {
+	border-bottom:1px dashed #ccc;
+	padding:3px 0;
+	text-align:right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	margin:10px;
+}
+.actualizacion span {
+	color:#900;
+}
+#pagina_contenido h1{
+	margin:0;
+	padding:0;
+	font-size:19px;
+	color:#036;
+	font-weight:normal;
+	line-height:normal;
+	font-family:"trebuchet MS", tahoma, arial;
+
+}
+#texto_contenido {
+	line-height:16px;
+	text-align:justify;
+	padding-left:30px;
+}
+.compartir_contenido {
+	background-color:#FFF;
+	padding:10px;
+	border:1px solid #ccc;
+	float:right;
+	margin:0 0 10px 10px;
+	text-align:center;
+}
+.facebook{
+	margin-bottom:5px;
+}
+.twitter{
+	margin:0;
+}
+
+/***************------mios-------------------------------*/
+
+
+
+
+
+
+#header{ background-image:url(bg.jpg); background-repeat:repeat-x; height:125px; width:960px; margin:0 auto; position:relative; padding-top:35px;
+
+}
+
+
+#logo1 {
+	position:absolute;
+	width:101px;
+	height:100px;
+	z-index:1;
+	left: 25px;
+	top: 15px;
+	background-image: url(derechounipamplona.png);
+	background-repeat:no-repeat;
+}
+#logos2 {
+	position:absolute;
+	width:483px;
+	height:162px;
+	z-index:1;
+	left: 453px;
+	top: -2px;
+	background-image:url(juridico.png);
+	background-repeat:no-repeat;
+}
+
+
+#header_int_sup{ height:70px; width:250px; margin:0 0 0 135px; font-family:"trebuchet MS", tahoma, arial;
+	color:#fff;
+}
+
+
+.menu2{ background-color: #E6E6E6; 
+	
+}
+
+
+
