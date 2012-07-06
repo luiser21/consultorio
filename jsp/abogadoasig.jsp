@@ -11,7 +11,6 @@ if(sesion==null || sesion.equals("false")){
 	}
 }
 try{
-
 Conex con = new Conex();
 String periodo=String.valueOf(request.getParameter("periodo"));
 String buscar=String.valueOf(request.getParameter("buscar"));
