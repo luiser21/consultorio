@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
+﻿<%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
 <%
 String nomc=(String)session.getAttribute("nomadmin");
 String sesion=(String)session.getAttribute("admin");
@@ -11,6 +11,7 @@ if(sesion==null || sesion.equals("false")){
 	}
 }
 try{
+
 Conex con = new Conex();
 String periodo=String.valueOf(request.getParameter("periodo"));
 String buscar=String.valueOf(request.getParameter("buscar"));
