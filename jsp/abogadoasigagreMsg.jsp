@@ -10,7 +10,7 @@ if(sesion==null || sesion.equals("false")){
 		 response.sendRedirect("ilegal.jsp");
 	}
 }
-try{
+try{ 
 Conex con = new Conex();
 Conex conarea = new Conex();
 boolean flag=false;
