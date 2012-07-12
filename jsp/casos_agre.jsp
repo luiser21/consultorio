@@ -8,6 +8,15 @@ if(sesion==null || sesion.equals("false")){
 }
 try{
 String periodo=String.valueOf(request.getParameter("periodo"));
+
+Conex con = new Conex();
+ResultSet  rs_contar=null;						  
+String consulta_contar = "select count(*) as areas from area";
+rs_contar = con.consultar(consulta_contar);
+rs_contar.next();		
+String numero_area=rs_contar.getString("areas");
+int contar_area=Integer.parseInt(numero_area);
+	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
@@ -31,9 +40,35 @@ String periodo=String.valueOf(request.getParameter("periodo"));
  					 <h1 style="color: #003366;  font-size: 20px;">Nuevo Radicado / Periodo: <%=periodo%></h1>
  					 <p></p>  
  				 <div >
+                <% if(contar_area==0){	%>	
+               			  <br/><br/><br/><br/>
+                   <table width="450" border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr>
+                            <td align="right"><input name="" type="button" class="botones" value=" Volver" onclick='history.go(-1)'></td>
+                          </tr>
+                        </table>
+                        <br/>
+                       <table width="450" border="0" align="center" class="fondo_tabla" cellpadding="0" cellspacing="1">
+                          <tr>
+                            <td >    
+                                  <table width="450" border="0" cellpadding="1" cellspacing="0" >
+                          <tr class="fondo_celda_1">
+                            <td colspan="2" class="text_blanco"   height="20" align="center">Mensaje de Alerta!!!</td>
+                            </tr>
+                          <tr class="fondo_celda_2" height="20" align="center">
+                            <td width="107"><img src="img/info.png" width="32" height="32" /></td>
+                            <td width="339" class="text_negro" align="left"> <br/>No se ha detectado ninguna area del derecho registrada. <br/>Por favor registrelas para poder ingresar los radicados <br/> <br/></td>
+                          </tr>
+                        </table>    
+                            </td>
+                          </tr>
+                          </table><br/><br/><br/><br/><br/><br/><br/><br/>
+           <% }else{	%>	    
+                 
    					 <jsp:include page="casoagre.jsp">    
 					 <jsp:param name="periodo" value="<%=periodo%>" />
 					</jsp:include>
+            <%}%>        
   				</div>
 			</div>  
  			<div style="clear:both"></div>

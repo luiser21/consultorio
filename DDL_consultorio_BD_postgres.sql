@@ -498,4 +498,11 @@ INSERT INTO "rolxusuario" VALUES ('2', '7');
 INSERT INTO "rolxusuario" VALUES ('2', '8');
 INSERT INTO "rolxusuario" VALUES ('2', '9');
 
+INSERT INTO "area" VALUES ('PUBLICA');
+INSERT INTO "area" VALUES ('PRIVADA');
+INSERT INTO "area" VALUES ('PENAL');
+INSERT INTO "area" VALUES ('LABORAL');
+
+
+
 

@@ -329,7 +329,7 @@ rs.beforeFirst();
                           <td width="12%" height="20" class="text_negro"><div align="center"><%
 						  comparar=opes[ii][4];
 						  if(comparar.equals("SI")){%>
-						  <img src="img/acs_chk.gif" width="14" height="14" title="Desactivar Estudiante" border="0" onclick='javascript:actionChange("desactivar", "<%= opes[ii][0]%>")' style='cursor:pointer;'>   
+			 <img src="img/acs_chk.gif" width="14" height="14" title="Desactivar Estudiante" border="0" onclick='javascript:actionChange("desactivar", "<%= opes[ii][0]%>")' style='cursor:pointer;'>   
 						   <%}else{
 						   		 if(comparar.equals("NO")){%>
 						    <img src="img/error.gif" width="14" title="Activar Estudiante" height="14" border="0" onclick='javascript:actionChange("activar", <%= opes[ii][0]%>)' style='cursor:pointer;'>        

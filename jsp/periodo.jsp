@@ -205,11 +205,12 @@ rs.beforeFirst();
 						  </div></td>
                           <td height="20" class="text_negro" align="center"><%
 						String mm=opes[ii][5];
+						String pid=opes[ii][0];
 						 int nm=Integer.parseInt(mm);
 						  if(nm==0){%>
-						  <img src="img/acs_chk.gif" width="14" title="Desactivar Periodo" height="14" hspace="5"  onclick='javascript:actionChange("desactivar", "<%= opes[ii][0]%>")' style='cursor:pointer;' border="0" >
+<img src="img/acs_chk.gif" width="14" title="Desactivar Periodo" height="14" hspace="5"  onclick='javascript:actionChange("desactivar","<%= opes[ii][0]%>")' style='cursor:pointer;' border="0" >
 						  <%}if(nm==1){%>
-						    <img src="img/error.gif" width="14"  title="Activar Periodo" height="14" hspace="5" onclick='javascript:actionChange("activar", "<%= opes[ii][0]%>")' style='cursor:pointer;'  border="0" >
+<img src="img/error.gif" width="14"  title="Activar Periodo" height="14" hspace="5" onclick='javascript:actionChange("activar",<%=pid%>)' style='cursor:pointer;'  border="0" >
 							 <%}%></td>
                         </tr>
                        <%

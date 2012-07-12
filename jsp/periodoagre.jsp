@@ -133,9 +133,9 @@ function volver(frm){
 						   <option value="">Seleccione....</option>
 						   <% for(int i=4;i>=f;i--){
                            	     if((fecha.get(java.util.Calendar.YEAR)+i)==(fecha.get(java.util.Calendar.YEAR)))   {             %>  
-                                       <option value="<%out.println(fecha.get(java.util.Calendar.YEAR));%>"><%out.println(fecha.get(java.util.Calendar.YEAR));%></option>
+                                       <option value="<%out.print(fecha.get(java.util.Calendar.YEAR));%>" ><%out.print(fecha.get(java.util.Calendar.YEAR));%></option>
                                   <%}else{%>
-                        	    	<option value="<%out.println(fecha.get(java.util.Calendar.YEAR)+i);%>"><%out.println(fecha.get(java.util.Calendar.YEAR)+i);%></option>
+                        	    	<option value="<%out.print(fecha.get(java.util.Calendar.YEAR)+i);%>"><%out.print(fecha.get(java.util.Calendar.YEAR)+i);%></option>
                             <%}}%>
                             </select> 
                               </td>

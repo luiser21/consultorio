@@ -22,7 +22,7 @@ String periodo=String.valueOf(request.getParameter("periodo"));
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
 <title>Jurisprudencia y Derecho - Unipamplona</title>
-<meta http-equiv="content-type" content="text/html; charset="iso-8859-1>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="images/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
@@ -46,7 +46,7 @@ function registrar(frm){
 		alert("Debe ingresar la identificacion del estudiante.");
 		frm.identificacion.focus();	
 	}else if(!esNumero(frm.identificacion.value)){	
-		alert("El valor de este campo debe ser tipo numérico.");
+		alert("El valor de este campo debe ser tipo numerico.");
 		frm.identificacion.focus();
 	}else if(y==0){	
 		alert("Debe seleccionar las Areas.");
@@ -67,7 +67,7 @@ function registrar2(frm){
 		alert("Debe ingresar la identificacion del estudiante.");
 		frm.identificacion.focus();	
 	}else if(!esNumero(frm.identificacion.value)){	
-		alert("El valor de este campo debe ser tipo numérico.");
+		alert("El valor de este campo debe ser tipo numerico.");
 		frm.identificacion.focus();
 	}else if(confirm ("¿Está seguro de crear el registro?")){
 		frm.action="abogadoasigagreMsg.jsp";
@@ -172,15 +172,34 @@ $(document).ready(function(){
                         <tr class="fondo_celda_5">
                           <td   align="center"> 
                             <%
-						  ResultSet  rs=null;
-						  String consulta = "select max(estuid) as numeromaxi from estudiantes";		
-						  rs = con.consultar(consulta);
-						  rs.next();							
-						  String numero=rs.getString("numeromaxi");
-						  con.close();
-					      int contares=Integer.parseInt(numero)+1;
+						          
+						  ResultSet  rs_contar=null;						  
+						  String consulta_contar = "select count(*) as estu from estudiantes";
+						  rs_contar = con.consultar(consulta_contar);
+						  rs_contar.next();		
+						  String numero_estu=rs_contar.getString("estu");
+						  int contar_estu=Integer.parseInt(numero_estu);
+						  int contares=1;							
+						
+							 if(contar_estu!=0){	
+							
+								  ResultSet  rs=null;
+								  String consulta = "select max(estuid) as numeromaxi from estudiantes";		
+								  rs = con.consultar(consulta);
+								  rs.next();							
+								  String numero=rs.getString("numeromaxi");
+								  con.close();
+								  contares=Integer.parseInt(numero)+1;
 		   				  %>
-                            <input  type="hidden" name="codigo" size="10"  value="<%=contares%>" >                            <input type="text" name="nombre" class="text_file" size="30" onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);this.value=this.value.toUpperCase();" ></td>
+                            <input  type="hidden" name="codigo" size="10"  value="<%=contares%>" >  
+                           <%}else{%>
+                           
+                            <input  type="hidden" name="codigo" size="10"  value="<%=contares%>" >  
+                           <%}%> 
+                            
+                            
+                            
+                                                      <input type="text" name="nombre" class="text_file" size="30" onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);this.value=this.value.toUpperCase();" ></td>
                           <td height="20"  align="center"><input type="text" name="apellido" size="30"  class="text_file" onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);this.value=this.value.toUpperCase();"></td>
                         </tr>
                         <tr class="fondo_celda_2">
@@ -217,20 +236,32 @@ $(document).ready(function(){
                           <td   height="20" colspan="2" align="left" > <input name="checktodos"   id="checktodos" type="checkbox"  value="" ><div style=" float:right; width:295px;">                <span class="text_blanco" >Areas a Asignar</span></div></td>
                           </tr>
                           <%
-							Conex con1=new Conex();
+						  
+						  
+						  Conex con1=new Conex();
 						  ResultSet  res=null;
-						  String consultas = "select max(codigo) as numeromaxi from asignacion";		
-						  res = con1.consultar(consultas);
-						  res.next();							
-						  String numeros=res.getString("numeromaxi");
-						  con1.close();
-					      int contadors=Integer.parseInt(numeros)+1;
+						  
+						  ResultSet  rs_asig=null;						  
+						  String consulta_asig = "select count(*) as asig from asignacion";
+						  rs_asig = con1.consultar(consulta_asig);
+						  rs_asig.next();		
+						  String numero_asig=rs_asig.getString("asig");
+						  int contar_asig=Integer.parseInt(numero_asig);
+						  int contadors=1;							
+						
+							 if(contar_asig!=0){	
+						  
+								  String consultas = "select max(codigo) as numeromaxi from asignacion";		
+								  res = con1.consultar(consultas);
+								  res.next();							
+								  String numeros=res.getString("numeromaxi");
+								  contadors=Integer.parseInt(numeros)+1;
 		   				  %>
 						  <input name="codigoarea"  type="hidden"  value="<%=contadors%>" >			
-                      
-                       
-                        <%
-				
+                      		<%}else{%>
+                          <input name="codigoarea"  type="hidden"  value="<%=contadors%>" >	
+                        	<%}
+											
 							rs2.beforeFirst();
 							if(cont2!=0){ 
 								rs2.next();

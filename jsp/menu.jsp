@@ -25,7 +25,7 @@ if(sesion==null || sesion.equals("false")){
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=7">Formatos - Recepcion de Casos </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=8">Buscar Radicados</a></li>
             <li><a href="periodo.jsp">Periodos</a></li>
-            <li><a href="area.jsp">Areas</a></li>
+          <!--  <li><a href="area.jsp">Areas</a></li> -->
         </ul>
         <ul class="menu2">
             <li><a href="usuarios.jsp">Usuarios</a></li>

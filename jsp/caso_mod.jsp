@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
 
-<meta http-equiv="content-type" content="text/html; charset="iso-8859-1>
+
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <%
@@ -179,21 +179,7 @@ else
   }
 </script>
 <SCRIPT LANGUAGE="JavaScript">
-function validarBotonRadio() {
-var s = "no";
-with (document.form1){
-for ( var i = 0; i < area.length; i++ ) {
-if ( area[i].checked ) {
-s= "si";
-//window.alert("Ha seleccionado: \n" + area[i].value);
-break;
-}
-}
-if ( s == "no" ){
-window.alert("Debe seleccionar el area de consulta" ) ;
-}
-}
-}
+
 function registrar(frm){
 var s = "no";
 	if(esVacio(frm.fecha.value)){	
@@ -355,6 +341,9 @@ var s = "no";
 	}else if(esVacio(frm.exposicion.value)){	
 		alert("Debe ingresar la exposicion de motivos.");
 		frm.exposicion.focus();	
+	}else if(!chequearOpcion()) {	
+		alert("Debe seleccionar el area de consulta");
+		frm.area.focus();
 	}else if(esVacio(frm.recibido.value)){	
 		alert("Debe seleccionar si fue recibido.");
 		frm.recibido.focus();
@@ -1298,7 +1287,7 @@ a&ntilde;os
           </fieldset>
         
         <div style="margin-left:576px; margin-top: -30px;">
-        <input name=""  id="SaveAccount"  class="button"   type="button"  style="background-color: #005AAB; border: 0 none; color: #FFFFFF; cursor: pointer; font-family: arial,helvetica,sans-serif; 		font-size: 11px; font-weight: bold; height: 20px; padding-bottom: 3px; margin-right: 2px;" onClick="javascript:registrar(document.forms['form1']);validarBotonRadio();" value="  Actualizar  " >
+        <input name=""  id="SaveAccount"  class="button"   type="button"  style="background-color: #005AAB; border: 0 none; color: #FFFFFF; cursor: pointer; font-family: arial,helvetica,sans-serif; 		font-size: 11px; font-weight: bold; height: 20px; padding-bottom: 3px; margin-right: 2px;" onClick="javascript:registrar(document.forms['form1']);" value="  Actualizar  " >
            </div>
        
         </form>
