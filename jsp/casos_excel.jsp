@@ -55,12 +55,11 @@ Radicados Cargados<br/>
                         <% 	
 						boolean aux=true;
 						String consulta = null;
-					
-			consulta ="select *  from personacaso where perid='"+periodo+"' order by perradicado";
-						
-							ResultSet  rs=con.consultar(consulta);
-int cont = con.contar(rs);String[][] opes = new String[cont][7];
-rs.beforeFirst();
+						consulta ="select *  from personacaso where perid='"+periodo+"' order by perradicado";
+						ResultSet  rs=con.consultar(consulta);
+						int cont = con.contar(rs);
+						String[][] opes = new String[cont][7];
+						rs.beforeFirst();
 						if(cont!=0){ 
 							rs.next();
 							for(int ii=0;ii<cont;ii++)
@@ -81,24 +80,24 @@ rs.beforeFirst();
                         <tr  bgcolor="#ffffff" style="color:#000000; ">
                           <%if(opes[ii][6]==null){ %> 
                         
-                          <td height="20" style="color: #F00; "><div align="center"> <%=ii+1%></div></td>
-                          <td height="20" style="color: #F00; "><div align="center"> <%= opes[ii][0] %></div></td>                  
-                        
-                          <td height="20" style="color: #F00; " colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
-                         
-                          <td height="20" style="color: #F00; " colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
-                          <td height="20" style="color: #F00; "><div align="center"><%= opes[ii][4] %></div></td>
-                          <td height="20" align="center" style="color: #F00; "><%=opes[ii][5]%>                              </td>
+                              <td height="20" style="color: #F00; "><div align="center"> <%=ii+1%></div></td>
+                              <td height="20" style="color: #F00; "><div align="center"> <%= opes[ii][0] %></div></td>                  
+                            
+                              <td height="20" style="color: #F00; " colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
+                             
+                              <td height="20" style="color: #F00; " colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
+                              <td height="20" style="color: #F00; "><div align="center"><%= opes[ii][4] %></div></td>
+                              <td height="20" align="center" style="color: #F00; "><%=opes[ii][5]%>                              </td>
                           <%}else{%>
                       
-                          <td height="20" class="text_negro"><div align="center"> <%=ii+1%></div></td>
-                          <td height="20" class="text_negro"><div align="center"> <%= opes[ii][0] %></div></td>                  
-                        
-                          <td height="20" class="text_negro" colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
-                         
-                          <td height="20" class="text_negro" colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
-                          <td height="20" class="text_negro"><div align="center"><%= opes[ii][4] %></div></td>
-                          <td height="20" align="center" class="text_negro"><%=opes[ii][5]%>                              </td>
+                              <td height="20" class="text_negro"><div align="center"> <%=ii+1%></div></td>
+                              <td height="20" class="text_negro"><div align="center"> <%= opes[ii][0] %></div></td>                  
+                            
+                              <td height="20" class="text_negro" colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
+                             
+                              <td height="20" class="text_negro" colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
+                              <td height="20" class="text_negro"><div align="center"><%= opes[ii][4] %></div></td>
+                              <td height="20" align="center" class="text_negro"><%=opes[ii][5]%>                              </td>
                          
                          
                            <%}%>
