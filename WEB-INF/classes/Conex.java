@@ -19,7 +19,7 @@ public class Conex
 	public Conex()throws SQLException, ClassNotFoundException
 	{
 		Class.forName("org.postgresql.Driver");
-		this.conexion=DriverManager.getConnection("jdbc:postgresql://localhost:5432/consultorio","postgres","1234");
+		this.conexion=DriverManager.getConnection("jdbc:postgresql://localhost:5432/consultorio","postgres","301-mami");
 		this.sentencia=this.conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 	}	
 	
