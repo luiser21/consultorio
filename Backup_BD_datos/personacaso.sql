@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-07-12 17:08:07 Hora est. del Pacífico de SA
+-- Started on 2012-07-12 20:23:29 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -3043,7 +3043,7 @@ COPIA RECIBO IMPUESTO PREDIAL AÃ‘O 2011
 COPIA RECIBO IMPUESTO PREDIAL AÃ‘O 2012', 'JHON ANDRES', 'HERNANDEZ', '1052078043', NULL, NULL, NULL, 'JUAN PABLO', 'MARTINEZ CAMARGO', '1026270241', 'SI', '12012', 250, 'CUCUTA', 'NO', '14 - 18 anos', '2012-07-12', '12:00:02.968', '2012-07-12', '12:00:28.64');
 
 
--- Completed on 2012-07-12 17:08:07 Hora est. del Pacífico de SA
+-- Completed on 2012-07-12 20:23:31 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete

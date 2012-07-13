@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-07-12 17:08:08 Hora est. del Pacífico de SA
+-- Started on 2012-07-12 20:23:32 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -842,7 +842,7 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (748, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (780, 250, 'PUBLICA', '12012', 1);
 
 
--- Completed on 2012-07-12 17:08:08 Hora est. del Pacífico de SA
+-- Completed on 2012-07-12 20:23:32 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
