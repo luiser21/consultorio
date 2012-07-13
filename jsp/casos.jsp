@@ -253,6 +253,7 @@ function actionChange2(actionName, fileID, fileID2)
 }
 </style>
 <%}%>
+
 </head>
 <body onload="javascript:asignarzona(document.forms['form1'],'<% out.print(periodo);%>','<% out.print(buscar);%>','<% out.print(dep);%>');">
 <div id="content">
@@ -291,7 +292,7 @@ function actionChange2(actionName, fileID, fileID2)
                  <div id="msgBox_info2" class="notification_3 information_3 png_bg" >
                                 <div>
                                 El Periodo se encuentra desactivado. Solo puede ver los Radicados</div>
-                            </div>
+                    </div>
      <%		}
 	 }else{
      	if(rs_periodo.getString("activo").equals("1")){%>
@@ -433,7 +434,7 @@ function actionChange2(actionName, fileID, fileID2)
                           <%}if(cont==1){%>
                           <input  type="radio" name="cc" value="<%= opes[ii][0] %>"/>  
 						  <%}%>
-	                                        </td>
+                                  </td>
                            <%if(opes[ii][6]==null){ %> 
                           <td height="20" class="text_rojo"><div align="center"> <%=y%></div></td>
                           <td height="20" class="text_rojo"><div align="center"> <%= opes[ii][0] %></div></td>                  
@@ -455,7 +456,7 @@ function actionChange2(actionName, fileID, fileID2)
 						   }else{%>
                            		 <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
                                       <img src="img/executive.png"  title="Asignar Estudiante" width="16" height="16" />
-                                      </a>
+                                    </a>
                          <%}%>
                           </td>
                           <td height="20" align="center" class="text_rojo">
@@ -487,7 +488,7 @@ function actionChange2(actionName, fileID, fileID2)
 						   }else{%>
                            		  <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
                                       <img src="img/executive.png" width="16" height="16"  title="Asignar Estudiante"/>
-                                      </a>
+                                    </a>
                          <%}%>
                           </td>
                           <td height="20" align="center" class="text_negro">
@@ -499,6 +500,7 @@ function actionChange2(actionName, fileID, fileID2)
                             <td height="20" align="center" class="text_rojo"><img src="img/user-trash-full.png" width="14"  title="Eliminar Radicado" height="14" onclick='javascript:actionChange2("eliminar", "<%= opes[ii][0]%>", "<%=periodo%>")' style="cursor:pointer"/></td>
                            <%}}%>
                         </tr>
+                         
                        	    <%
 							y++;
 							}
@@ -508,6 +510,7 @@ function actionChange2(actionName, fileID, fileID2)
                         <tr align="center" class="fondo_celda_5">
                           <td height="20" class="text_negro" colspan="10">No se encontraron registros.</td>
                         </tr>
+                       
                         <%}%>
                     </table></td>
                   </tr>
@@ -519,7 +522,7 @@ function actionChange2(actionName, fileID, fileID2)
                   <%}
 				
 			 con.close();
-			 %>
+			 %>         
               </table>
                    &nbsp;</p>
 
