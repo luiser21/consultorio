@@ -18,7 +18,7 @@ if(sesion==null || sesion.equals("false")){
         <ul>
             <li><a href="totales.jsp">Informe General </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=1">Informe por Periodo Lectivo </a></li>
-            <li><a  href="informe_graficado.jsp">Informe Estadisitico Graficado </a></li>
+            <li><a  href="informe_graficado.jsp">Informe Grafico - Estadistico </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=3">Abogados en Formacion Asignados </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=4">Abogados en Formacion que Sistematizan </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=5">Abogado en Formacion que Recepciona </a></li>
