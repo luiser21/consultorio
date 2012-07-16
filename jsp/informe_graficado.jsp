@@ -14,6 +14,12 @@ if(sesion==null || sesion.equals("false")){
 <link href="images/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
+<script type='text/javascript'> 
+window.onload = detectarCarga; 
+function detectarCarga(){ 
+document.getElementById("imgLOAD").style.display="none"; 
+} 
+</script>
 </head>
 <body>
 <div id="content">
@@ -32,9 +38,12 @@ if(sesion==null || sesion.equals("false")){
   <div class="actualizacion">Administrador - Consultorio</div>
   <h1 >Informe Estadistico</h1>
   <p></p>
-  <br/>    
- 
+  <br/>  
 <div id="texto_contenido"> 
+<div id='imgLOAD' style="TEXT-ALIGN: center"> 
+<br/> <br/><b>Generando el Grafico Por Favor espere.......</b><br/> <br/><br/> <br/>
+<img alt='LOADING' height='70' src='images/loading.gif' width='70'/> 
+</div>
   <jsp:include page="ejemplo.jsp" />
  </div>
 </div> 
