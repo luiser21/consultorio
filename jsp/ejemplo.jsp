@@ -3,7 +3,7 @@
 try{
 
 Conex con = new Conex();	
-String consulta="select periodo.per as periodo, count(*) as radicados from personacaso as per, (select perid as per, perfecha from periodo order by perfecha desc) as periodo  where per.perid=periodo.per group by perid, periodo.per, periodo.perfecha order by periodo.perfecha desc";
+String consulta="select periodo.per as periodo, count(*) as radicados from personacaso as per, (select perid as per, perfecha from periodo order by perfecha desc) as periodo  where per.perid=periodo.per group by perid, periodo.per, periodo.perfecha order by periodo.perfecha asc";
 ResultSet  rs= con.consultar(consulta);
 
 int cont = con.contar(rs);
@@ -26,13 +26,22 @@ String fondo = null;
 <script type="text/javascript">
 		gvChartInit();
 		jQuery(document).ready(function(){
+			jQuery('#myTable1').gvChart({
+				chartType: 'AreaChart',
+				gvSettings: {
+					vAxis: {title: 'Radicados'},
+					hAxis: {title: 'Periodos'},
+					width: 420,
+					height: 250
+					}
+			});
 			jQuery('#myTable5').gvChart({
 				chartType: 'PieChart',
 				gvSettings: {
-					vAxis: {title: 'No of players'},
-					hAxis: {title: 'Month'},
-					width: 520,
-					height: 300
+					vAxis: {title: 'Radicados'},
+					hAxis: {title: 'Periodo'},
+					width: 420,
+					height: 250
 					}
 			});
 		});
@@ -52,8 +61,29 @@ String fondo = null;
                     	<th>RADICADOS</th> 
                       <% for(int ii=0;ii<cont;ii++){%>	
 						<td><%=opes[ii][1]%></td>
+						 <%}%>	
+					</tr>
+				</tbody>
+			</table>
+           
+			<table id='myTable1'>				
+				<thead>
+					<tr>
+						<th></th>
+                        <% for(int ii=0;ii<cont;ii++){%>		
+						<th><%=opes[ii][0]%></th>
+                     <%}%>	
+						
+					</tr>
+				</thead>
+					<tbody>
+					<tr>
+						<th>Radicados</th>
+						<% for(int ii=0;ii<cont;ii++){%>	
+						<td><%=opes[ii][1]%></td>
 						 <%}}%>	
 					</tr>
+					
 				</tbody>
 			</table>
 <%} catch(Exception e){
