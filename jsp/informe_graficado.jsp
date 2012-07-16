@@ -14,9 +14,6 @@ if(sesion==null || sesion.equals("false")){
 <link href="images/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
-
-<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="content">
@@ -35,21 +32,10 @@ if(sesion==null || sesion.equals("false")){
   <div class="actualizacion">Administrador - Consultorio</div>
   <h1 >Informe Estadistico</h1>
   <p></p>
-  <br/>     
-  <div id="TabbedPanels1" class="TabbedPanels">
-    <ul class="TabbedPanelsTabGroup">
-      <li class="TabbedPanelsTab" tabindex="0">Radicados</li>
-      <li class="TabbedPanelsTab" tabindex="0">Casos</li>
-    </ul>
-    <div class="TabbedPanelsContentGroup">
-      <div class="TabbedPanelsContent"> 
-              <jsp:include page="ejemplo.jsp" />
-      </div>
-      <div class="TabbedPanelsContent"></div>
-    </div>
-  </div>
+  <br/>    
+ 
 <div id="texto_contenido"> 
-  
+  <jsp:include page="ejemplo.jsp" />
  </div>
 </div> 
  </td> </tr> 
@@ -62,7 +48,4 @@ if(sesion==null || sesion.equals("false")){
 	</tbody></table>
 </div>
 <jsp:include page="botoom.jsp" />
-<script type="text/javascript">
-var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
-</script>
 </body></html>

@@ -5,7 +5,7 @@ try{
 Conex con = new Conex();	
 String consulta="select periodo.per as periodo, count(*) as radicados from personacaso as per, (select perid as per, perfecha from periodo order by perfecha desc) as periodo  where per.perid=periodo.per group by perid, periodo.per, periodo.perfecha order by periodo.perfecha asc";
 ResultSet  rs= con.consultar(consulta);
-
+int total=0;
 int cont = con.contar(rs);
 String[][] opes = new String[cont][3];
 rs.beforeFirst();
@@ -14,6 +14,7 @@ if(cont!=0){
 	for(int ii=0;ii<cont;ii++){ 
 		opes[ii][0]=rs.getString("periodo");
 	    opes[ii][1]=rs.getString("radicados");
+		total= total + Integer.parseInt(opes[ii][1]);
 		rs.next();
 	}
 
@@ -31,7 +32,7 @@ String fondo = null;
 				gvSettings: {
 					vAxis: {title: 'Radicados'},
 					hAxis: {title: 'Periodos'},
-					width: 620,
+					width: 600,
 					height: 250
 					}
 			});
@@ -40,14 +41,14 @@ String fondo = null;
 				gvSettings: {
 					vAxis: {title: 'Radicados'},
 					hAxis: {title: 'Periodo'},
-					width: 620,
+					width: 600,
 					height: 250
 					}
 			});
 		});
 		</script>
         <table id='myTable5'>
-				<caption>Crecimiento Recepcion de Casos</caption>
+				<caption>Crecimiento Recepcion de Casos - TOTAL: <%=total%> Casos Recibidos</caption>
 				<thead>
 					<tr>
                    		<th>PERIODOS</th>        
