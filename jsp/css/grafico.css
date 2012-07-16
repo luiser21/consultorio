@@ -39,13 +39,10 @@ body {
 
 #chartData {
   width: 200px;
-  margin: 0 40px 0 0;
+  margin: 0 10px 0 0;
   float: right;
-  border-collapse: collapse;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  background-position: 0 -100px;
+
+ 
 }
 
 #chartData th, #chartData td {
@@ -55,8 +52,7 @@ body {
 }
 
 #chartData th {
-  border-bottom: 2px solid #333;
-  text-transform: uppercase;
+
 }
 
 #chartData td {

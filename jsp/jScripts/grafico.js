@@ -11,9 +11,9 @@ function pieChart() {
   var sliceBorderStyle = "#fff";                    // Colour of the border around each slice
   var sliceGradientColour = "#ddd";                 // Colour to use for one end of the chart gradient
   var maxPullOutDistance = 5;                      // How far, in pixels, to pull slices out when clicked
-  var pullOutFrameStep = 4;                         // How many pixels to move a slice with each animation frame
-  var pullOutFrameInterval = 40;                    // How long (in ms) between each animation frame
-  var pullOutLabelPadding = 45;                     // Padding between pulled-out slice and its label  
+  var pullOutFrameStep = 3;                         // How many pixels to move a slice with each animation frame
+  var pullOutFrameInterval = 20;                    // How long (in ms) between each animation frame
+  var pullOutLabelPadding = 40;                     // Padding between pulled-out slice and its label  
   var pullOutLabelFont = "bold 10px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice label font
   var pullOutValueFont = "bold 10px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice value font
   var pullOutValuePrefix = "$";                     // Pull-out slice value prefix
@@ -59,9 +59,9 @@ function pieChart() {
     // Initialise some properties of the canvas and chart
     canvasWidth = canvas.width;
     canvasHeight = canvas.height;
-    centreX = canvasWidth / 3;
-    centreY = canvasHeight / 3;
-    chartRadius = Math.min( canvasWidth, canvasHeight ) / 4 * ( chartSizePercent / 100 );
+    centreX = canvasWidth / 2;
+    centreY = canvasHeight / 2;
+    chartRadius = Math.min( canvasWidth, canvasHeight ) / 3 * ( chartSizePercent / 100 );
 
     // Grab the data from the table,
     // and assign click handlers to the table data cells
