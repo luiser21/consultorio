@@ -31,7 +31,7 @@ String fondo = null;
 				gvSettings: {
 					vAxis: {title: 'Radicados'},
 					hAxis: {title: 'Periodos'},
-					width: 520,
+					width: 620,
 					height: 250
 					}
 			});
@@ -40,7 +40,7 @@ String fondo = null;
 				gvSettings: {
 					vAxis: {title: 'Radicados'},
 					hAxis: {title: 'Periodo'},
-					width: 520,
+					width: 620,
 					height: 250
 					}
 			});
