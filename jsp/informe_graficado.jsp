@@ -36,6 +36,36 @@ String fondo = null;
 <link href="css/grafico.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" src="jquery/jquery.min.js" type="text/javascript"></script>
 <script language="JavaScript" src="jScripts/grafico.js" type="text/javascript"></script>
+<script>
+
+function aleatorio(inferior,superior){
+    numPosibilidades = superior - inferior
+    aleat = Math.random() * numPosibilidades
+    aleat = Math.floor(aleat)
+    return parseInt(inferior) + aleat
+} 
+
+function dame_color_aleatorio(){
+	hexadecimal = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
+	color_aleatorio = "#";
+	for (i=0;i<6;i++){
+		pos = aleatorio(0,hexadecimal.length)
+		color_aleatorio += hexadecimal[pos]
+	}
+	return color_aleatorio
+}
+
+
+/*for (j=0;j<1;j++){
+	document.write (dame_color_aleatorio() + "<br>")
+}*/
+</script>
+<style>
+.fondo_celda_color {/*fondo segunda celda - titulos secundarios generalmente*/
+background-color: !important javascript: document.write (dame_color_aleatorio());
+
+}
+</style>
 </head>
 <body>
 <div id="content">
@@ -71,12 +101,8 @@ String fondo = null;
     <tr  class="fondo_celda_1 text_blanco">
       <th align="center">Periodos</th><th align="center">N° Radicados</th>
      </tr>
- <%	for(int ii=0;ii<cont;ii++){
-		fondo = "#0DA068";
-		if ((color%2)==0)
-			fondo = "#194E9C";
-			color += 1;%>                        
-   <tr style="color:<%=fondo%>" >
+ <%	for(int ii=0;ii<cont;ii++){%>                        
+ <script> document.write ('<tr  style="color:'+dame_color_aleatorio()+''>)</script>
       <td align="center"><%=opes[ii][0]%></td><td align="center"><%=opes[ii][1]%></td>
     </tr><%}}%>
   </table></div>
