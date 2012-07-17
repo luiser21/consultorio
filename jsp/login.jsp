@@ -3,23 +3,32 @@
 try{
 String usu = String.valueOf(request.getParameter("usuario"));
 String pass = String.valueOf(request.getParameter("password"));
+
 String nom = String.valueOf(request.getParameter("nombres_ope"));
 Conex con = new Conex();
+Conex conac = new Conex();
 int cont=0;
 String e = String.valueOf(request.getParameter("e"));
 ResultSet rs1=null;
 String [] rol = new String[5];
 if(!usu.equals("null") && !pass.equals("null"))
 {
+	
 	String consulta1 = "select * from rolxusuario rx, usuario u, rol r where rx.perid=u.perid and rx.rolid=r.rolid and u.usulogin='"+usu+"' and u.usupassword='"+pass+"' and u.usuestado='1'";	
-	rs1 = con.consultar(consulta1);
+	rs1 = con.consultar(consulta1);	
+	
 	if(rs1.next()){
 		cont = con.contar(rs1);
 		rs1.beforeFirst();
+		
+		String actualiza = "update usuario set contador=contador+1 where usulogin='"+usu+"'";
+	    conac.actualizar(actualiza);
+		
+		
 		for(int i=0;i<cont;i++){rs1.next();rol[i]=rs1.getString("rolnombre");}
 			int total1 = con.contar(rs1);
 			if(total1!=0){			
-				session.setAttribute("admin",usu);
+				session.setAttribute("admin",usu);				
 				Conex con2 = new Conex();
 				ResultSet res2=con2.consultar("select * from usuario u, persona p where u.perid=p.perid and u.usulogin='"+usu+"'");
 				if(res2.next()){				
