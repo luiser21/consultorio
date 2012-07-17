@@ -15,6 +15,7 @@ d=1;
 %>
 <link href="images/estilo.css" rel="stylesheet" type="text/css" />
 <script type='text/javascript' src='Scripts/jquery.min.js'></script>
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
 <%if(d==1){%>
 <style>
 body {

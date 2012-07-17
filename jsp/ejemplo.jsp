@@ -22,7 +22,6 @@ int color = 1;
 String fondo = null;	
 %>
 <script type="text/javascript" src="jScripts/jsapi.js"></script>
-<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="jquery/jquery.gvChart-1.1.min.js"></script>
 <script type="text/javascript">
 		gvChartInit();
