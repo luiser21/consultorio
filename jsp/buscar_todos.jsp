@@ -162,7 +162,7 @@ function exportar(frm){
     <td>Filtrar Radicados Por:</td>
     <td>
       
-      <select name="buscar" class="combos">
+      <select name="buscar" class="combos" onChange="javascript:cargarmun(document.forms['form1']);">
         <%switch(buscar){ 
 	case 0:%>	
         <option value="">Seleccione...</option>
@@ -226,7 +226,7 @@ default:
      <%	}%> 
      </td>
     <td><%if(buscar==1){%>	
-      <select name="municipio" class="combos">
+      <select name="municipio" class="combos" onChange="javascript:cargarmun(document.forms['form1']);">
         <%if(!municipio.equals("0")){%>		
         <option><%=municipio%></option>
         <%}else{%>		
@@ -275,7 +275,7 @@ default:
         <option value="SAN ANTONIO DEL TACHIRA" onClick="javascript:cargarmun(document.forms['form1']);">SAN ANTONIO DEL TACHIRA</option>
         </select>
       <%}if(buscar==4){	%>
-      <select name="sexo" class="combos" >
+      <select name="sexo" class="combos" onChange="javascript:cargarmun(document.forms['form1']);">
         
         <%if(sexo==0){%>
         <option value="">Seleccione...</option>
@@ -288,7 +288,7 @@ default:
         <option value="2" onClick="javascript:cargarmun(document.forms['form1']);">FEMENINO</option>         
         </select>
         <%}if(buscar==9){	%>
-      <select name="areas" class="combos" >
+      <select name="areas" class="combos" onChange="javascript:cargarmun(document.forms['form1']);">
         
         <%if(areas==0){%>
         <option value="">Seleccione...</option>
@@ -307,7 +307,7 @@ default:
         <option value="4" onClick="javascript:cargarmun(document.forms['form1']);">PUBLICA</option>        
         </select>
       <%}if(buscar==7){	%>
-      <select name="nacionalidad" class="combos" >	  
+      <select name="nacionalidad" class="combos" onChange="javascript:cargarmun(document.forms['form1']);" >	  
         <%if(nacionalidad==0){%>		
         <option value="">Seleccione...</option>
         <%}if(nacionalidad==1){%>	  
@@ -323,7 +323,7 @@ default:
         </select>
       
       <%}if(buscar==5){	%>
-      <select name="edades" class="combos" >
+      <select name="edades" class="combos" onChange="javascript:cargarmun(document.forms['form1']);">
         <%if(edades==0){%>  		
         <option value="">Seleccione...</option>
         <%}if(edades==1){%> 		
