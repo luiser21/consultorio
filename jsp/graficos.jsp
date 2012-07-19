@@ -10,7 +10,6 @@ if(sesion==null || sesion.equals("false")){
 		 response.sendRedirect("ilegal.jsp");
 	}
 }
-
 try{
 int buscar;
 String auxx=String.valueOf(request.getParameter("buscar"));
@@ -40,8 +39,6 @@ if(cont!=0){
 <link href="images/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
-<script language="JavaScript" src="jScripts/retrocesoSinObjetos.js"></script>
-<script language="JavaScript"   src="jquery/jquery-1.3.2.min.js"></script>
 <script language="JavaScript" src="jScripts/validaciones.js"></script>
 <script language="JavaScript">
 function generar(frm){
@@ -65,28 +62,6 @@ else          	    frm.buscar.value=bus;
 }
 
 </script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-	//Checkbox
-	$("input[name=checktodos]").change(function(){
-		$('input[type=checkbox]').each( function() {			
-			if($("input[name=checktodos]:checked").length == 1){
-				$("input[name=torta]").prop("checked", true);
-				//$("input[name=barra]").prop("checked", true);
-				//$("input[name=lineal]").prop("checked", true);
-				//$("input[name=area]").prop("checked", true);
-				//$("input[name=area2]").checked = true;
-			} else {
-				$("input[name=torta]").prop("checked", false);
-				//$("input[name=barra]").prop("checked", false);
-				//$("input[name=lineal]").prop("checked", false);
-				//$("input[name=area]").prop("checked", false);
-			}
-		});
-	});
- 
-});
-</script>
 </head>
 <body  onload="javascript:asignarzona(document.forms['form1'],'<% out.print(buscar);%>');">
 <div id="content">
@@ -108,24 +83,14 @@ $(document).ready(function(){
   <div class="actualizacion">Administrador - Consultorio</div>
   <h1>Informe Estadistico</h1>
   <p></p>
-  <div id="texto_contenido">
- 
+  <div id="texto_contenido"><br/>
+ <div id="msgBox_info" class="notification information png_bg">
+					<div>
+                    Seleccione los tipos de graficos que quiere generar junto con el tipo de informacion </div></div>
 <form name="form1" method="post">
-  <div  >
+  <div>
   <table width="600" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="178">&nbsp;</td>
-    <td width="180">&nbsp;</td>
-    <td width="24" rowspan="4" align="right">
-    
-    
-    
-    </td>
-    <td width="67" align="right"></td>
-    <td width="144" align="right"></td>
-    <td width="4" align="right"></td>
-    <td width="3" rowspan="4" align="right"></td>
-    </tr>
+  
   <tr>
     <td>Generar Graficos Por:</td>
     <td align="left">
@@ -168,10 +133,7 @@ $(document).ready(function(){
                     <td width="600" height="17" valign="top">
                       <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
-                          <td height="20" align="center" class="text_blanco"><span class="text_negro">
-              <input name="checktodos"   id="checktodos" type="checkbox"  value="" /> 
-                          </span></td>
-                          <td height="20" align="center" class="text_blanco">Tipos de Graficos</td>
+                          <td height="20" colspan="2" align="center" class="text_blanco">Tipos de Graficos</td>
                           </tr>
                         <tr class="fondo_celda_2">
                           <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="torta" id="torta"  />
