@@ -38,7 +38,7 @@ if(sesion==null || sesion.equals("false")){
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=3">Abogados en Formacion Asignados </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=4">Abogados en Formacion que Sistematizan </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=5">Abogado en Formacion que Recepciona </a></li>
-            <li><a class='iframe2' href="carries_forms/form_5.jsp?id=6">Abogados en Formacion Activos y en Reparto </a></li>
+            <li><a class='iframe2' href="carries_forms/form_5.jsp?id=6">Nuevos Abogados en Formacion Activos y en Reparto </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=7">Formatos - Recepcion de Casos </a></li>
             <li><a class='iframe2' href="carries_forms/form_5.jsp?id=8">Buscar Radicados</a></li>
             <li><a href="periodo.jsp">Periodos</a></li>
