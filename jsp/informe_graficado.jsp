@@ -14,6 +14,8 @@ if(sesion==null || sesion.equals("false")){
 <link href="images/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
+
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
 <script type='text/javascript'> 
 window.onload = detectarCarga; 
 function detectarCarga(){ 

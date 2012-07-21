@@ -57,7 +57,7 @@ if(sesion==null || sesion.equals("false")){
 %>
 </div>
 <div class="greyboxcontador" style="background-image:url(images/iconsvisitas.png);">
-  <h4>Ingresos a la Plataforma</h4>
+  <h4>Ingresos al Sistema</h4>
   <div class="framebox">
 		  <div id="contadorinterno">
     			<% int cont=rs.getInt("contador");%>

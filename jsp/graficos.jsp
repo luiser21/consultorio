@@ -36,19 +36,10 @@ if(cont!=0){
 <title>Jurisprudencia y Derecho - Unipamplona</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="images/estilo.css" rel="stylesheet" type="text/css">
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="shortcut icon" href="img/favicon.ico"><link href="images/estilo.css" rel="stylesheet" type="text/css">
+<link href="css/estilo.css" rel="stylesheet" type="text/css"> 
 <script language="JavaScript" src="jScripts/validaciones.js"></script>
 <script language="JavaScript">
-function generar(frm){
-if (!chequearOpcion()) {	
-		alert("Debe seleccionar un Grafico por lo menos.");
-	}else{
-		frm.action="";
-		frm.submit();
-		}
-}
 function cargarmun(frm){
 		frm.action="graficos.jsp";
 		frm.submit();
@@ -60,7 +51,61 @@ if(bus=="null")    frm.buscar.value="";
 else          	    frm.buscar.value=bus;
 
 }
-
+function generar(frm){
+		if(esVacio(frm.buscar.value)){
+			alert("Debe seleccionar un opcion.");
+			frm.buscar.select();
+		}else if(frm.buscar.value!='11'){
+			if(esVacio(frm.periodo.value)){
+				alert("Debe seleccionar un periodo.");
+				frm.periodo.select();
+			}
+		}
+		var y=0;		
+		for(var i = 0; i < frm.codigo.length; i++){		
+			if(frm.codigo[i].checked)y++;
+		}		
+		if(y>0 ) {
+			if(y>1){
+				frm.action="informe_graficado.jsp";
+				frm.submit();
+				
+			}
+			if(y==1){
+				frm.action="informe_graficado.jsp";
+				frm.submit();
+				
+			}
+		}else{
+				alert ("Debe seleccionar los tipos de graficos.");
+		}
+}
+</script>
+</script>
+<script type="text/javascript" src="highslide/highslide-with-html.js"></script>
+<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+<script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.wrapperClassName = 'draggable-header';
+</script>
+<script language="JavaScript"   src="jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+	//Checkbox
+	$("input[name=checktodos]").change(function(){
+		$('input[type=checkbox]').each( function() {			
+			if($("input[name=checktodos]:checked").length == 1){
+				$("input[name=codigo]").prop("checked", true);
+				//$("input[name=area2]").checked = true;
+			} else {
+				$("input[name=codigo]").prop("checked", false);
+			}
+		});
+	});
+ 
+});
 </script>
 </head>
 <body  onload="javascript:asignarzona(document.forms['form1'],'<% out.print(buscar);%>');">
@@ -88,7 +133,7 @@ else          	    frm.buscar.value=bus;
 					<div>
                     Seleccione los tipos de graficos que quiere generar junto con el tipo de informacion </div></div>
 <form name="form1" method="post">
-  <div>
+  <div><br/><br/>
   <table width="600" border="0" cellspacing="0" cellpadding="0">
   
   <tr>
@@ -115,7 +160,7 @@ else          	    frm.buscar.value=bus;
     <%if(buscar>0 && buscar<11){%>	
     <select name="periodo" class="combos">
     
-      <option >Seleccione...</option>
+      <option value="" >Seleccione...</option>
 	  <option value="0">Global</option>
 			<%for(int i=0;i<cont;i++){%>
      <option value="<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
@@ -127,51 +172,54 @@ else          	    frm.buscar.value=bus;
     </tr>  
   </table>            
   </div>
-   <br/>	<div align="right" style=" padding-bottom:1px;"><input name="" type="button"  onClick="javascript:generar(this.form)" class="botones" value="Procesar"></div>
-  <table width="600" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
+   <br/><br/>	<div align="right" style=" width:530px; padding-bottom:1px;"><input name="" type="button"  onClick="javascript:generar(this.form)" class="botones" value="Procesar"></div>
+  <table width="450" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
     <tr>
-                    <td width="600" height="17" valign="top">
+                    <td width="100%" height="17" valign="top">
                       <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
-                          <td height="20" colspan="2" align="center" class="text_blanco">Tipos de Graficos</td>
+                          <td height="20" align="center" class="text_blanco"><input name="checktodos"   id="checktodos" type="checkbox"  value="" /></td>
+                          <td height="20" align="center" class="text_blanco">Tipos de Graficos</td>
+                          <td height="20" align="center" class="text_blanco">Ver</td>
                           </tr>
                         <tr class="fondo_celda_2">
-                          <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="torta" id="torta"  />
+                          <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="1"/>
                            </td>
                           <td align="center" class="text_negro">Torta</td>
+                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=1" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
+        		</a></td>
                           </tr>
-                        
-                        <tr align="center" class="fondo_celda_5">
-                          <td height="20" class="text_negro" colspan="2"><img src="img/torta.jpg" width="121" height="107" /></td>
-                        </tr>
-                        <tr class="fondo_celda_2">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="barra" id="barra"  />
+                       
+                        <tr class="fondo_celda_3">
+                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="2"/>
                            </td>
                           <td align="center" class="text_negro">Barras</td>
+                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=2" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
+        		</a></td>
                         </tr>
-                        <tr align="center" class="fondo_celda_5">
-                          <td height="20" class="text_negro" colspan="2"><img src="img/barras.jpg" width="417" height="86" /></td>
-                        </tr>
+                        
                         <tr class="fondo_celda_2">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="lineal" id="lineal"  />
+                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="3"/>
                             </td>
                           <td align="center" class="text_negro">Lineal</td>
+                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=3" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
+        		</a></td>
                         </tr>
-                        <tr align="center" class="fondo_celda_5">
-                          <td height="20" class="text_negro" colspan="2"><img src="img/lineal.jpg" width="426" height="91" /></td>
-                        </tr>
-                        <tr class="fondo_celda_2">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="area" id="area" />
+                        
+                        <tr class="fondo_celda_3">
+                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="4"/>
                            </td>
                           <td align="center" class="text_negro">Area</td>
+                          <td align="center" class="text_negro">
+<a href="carries_forms/form_11.jsp?cc=4" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
+        		</a>
+ </td>
                         </tr>
-                        <tr align="center" class="fondo_celda_5">
-                          <td height="20" class="text_negro" colspan="2"><img src="img/area.jpg" width="410" height="89" /></td>
-                        </tr>                     
+                                          
                       </table>						
                   </tr>
               </table>
-  </form><br/>			  
+  </form><br/>		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>	  
    </div>
 </div> 
  </td> </tr> 
