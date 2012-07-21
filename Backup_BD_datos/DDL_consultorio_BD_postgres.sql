@@ -77,6 +77,7 @@ CREATE TABLE usuario
   usuestado int4,
   usulogin varchar(20) NOT NULL,
   usupassword varchar(20) NOT NULL,
+  contador int8 DEFAULT 0,
   CONSTRAINT usuario_pkey PRIMARY KEY (perid),
   CONSTRAINT usuario_fk FOREIGN KEY (perid)
       REFERENCES persona (perid) MATCH SIMPLE
