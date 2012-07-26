@@ -167,21 +167,20 @@ $(document).ready(function(){
                       <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
                           <td height="20" align="center" class="text_blanco"><input name="checktodos"   id="checktodos" type="checkbox"  value="" /></td>
-                          <td height="20" align="center" class="text_blanco">Tipos de Graficos</td>
-                          <td height="20" align="center" class="text_blanco">Ver</td>
+                          <td height="20" colspan="2" align="center" class="text_blanco">Tipos de Graficos</td>
                           </tr>
                         <tr class="fondo_celda_2">
                           <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="1"/>
                            </td>
-                          <td align="center" class="text_negro">Torta</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
+                          <td width="74%" align="center" class="text_negro">Torta</td>
+                          <td width="21%" align="center" class="text_negro"><img src="img/torta.png" width="30" height="30" /></td>
                           </tr>
                        
                         <tr class="fondo_celda_3">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="2"/>
                            </td>
                           <td align="center" class="text_negro">Barras</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
+                          <td align="center" class="text_negro"><img src="img/barras.png" width="30" height="30" /></td>
                         </tr>
                         
                         <tr class="fondo_celda_2">
