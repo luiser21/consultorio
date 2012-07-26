@@ -122,8 +122,14 @@ function volver(frm){
 </div>
 <jsp:include page="botoom.jsp" />
 </body></html>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal.jsp");
+			}
+		}				
 }%>

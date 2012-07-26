@@ -1,7 +1,12 @@
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
 <%
+String nomc=(String)session.getAttribute("nomadmin");
+String sesion=(String)session.getAttribute("admin");
+String rol=(String)session.getAttribute("roles");
+if(sesion==null || sesion.equals("false")){
+   response.sendRedirect("login.jsp");
+}
 try{
-
 Conex con = new Conex();	
 String consulta="select periodo.per as periodo, count(*) as radicados from personacaso as per, (select perid as per, perfecha from periodo order by perfecha desc) as periodo  where per.perid=periodo.per group by perid, periodo.per, periodo.perfecha order by periodo.perfecha asc";
 ResultSet  rs= con.consultar(consulta);
@@ -86,8 +91,14 @@ String fondo = null;
 					
 				</tbody>
 			</table>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal.jsp");
+			}
+		}				
 }%>

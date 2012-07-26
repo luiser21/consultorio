@@ -5,10 +5,6 @@ String sesion=(String)session.getAttribute("admin");
 String rol=(String)session.getAttribute("roles");
 if(sesion==null || sesion.equals("false")){
    response.sendRedirect("login.jsp");
-}else{ 
-	if(!rol.equals("Admin")){
-		 response.sendRedirect("ilegal.jsp");
-	}
 }
 try{	
 	
@@ -308,8 +304,14 @@ var elementos2 = document.getElementsByName(Fila2);
 alert("El usuario ya existe");
 </script>
 <%}%>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal.jsp");
+			}
+		}				
 }%>

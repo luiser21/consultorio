@@ -8,12 +8,6 @@ if(sesion==null || sesion.equals("false")){%>
 	window.parent.location='../login.jsp';
 </script>
 <%
-} else{ 
-	if(!rol.equals("Admin")){%>
-		<script>
-	window.parent.location='../ilegal.jsp';
-</script>
-<%	}
 }
 try{
 String periodo=String.valueOf(request.getParameter("periodo"));
@@ -318,8 +312,14 @@ if(contesd!=0){
   </table>
   <p>&nbsp;</p>
 </body></html>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal_form.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("../ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal_form.jsp");
+			}
+		}				
 }%>

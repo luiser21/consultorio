@@ -4,7 +4,6 @@
 String nomc=(String)session.getAttribute("nomadmin");
 String sesion=(String)session.getAttribute("admin");
 String rol=(String)session.getAttribute("roles");
-
 if(sesion==null || sesion.equals("false")){
    response.sendRedirect("login.jsp");
 }

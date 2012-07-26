@@ -2,16 +2,12 @@
 <link rel="stylesheet" href="css/careers_lightbox/colorbox.css" />
 <script src="jquery/jquery.colorbox.js"></script> 
 <%
-String sesion=(String)session.getAttribute("admin");
+try{
 String rol=(String)session.getAttribute("roles");
-String contador=(String)session.getAttribute("contador");
-if(sesion==null || sesion.equals("false")){
-
-}else{
-	Conex con = new Conex();
-    String consulta = "select sum(contador) as contador  from usuario";	
-	ResultSet rs = con.consultar(consulta);	
-	rs.next();
+Conex con = new Conex();
+String consulta = "select sum(contador) as contador  from usuario";	
+ResultSet rs = con.consultar(consulta);	
+rs.next();
 
 %>
 <script>
@@ -68,5 +64,9 @@ if(sesion==null || sesion.equals("false")){
   </div><br/>
   <div class="fechacontador">Desde el 17 de Julio de 2012</div>
 </div>
-<%}%>
 <br/>
+<%}catch(Exception e){
+		String error=e.toString(); 
+		session.setAttribute("error",error);
+		response.sendRedirect("error_fatal.jsp");		
+}%>

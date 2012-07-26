@@ -1,5 +1,11 @@
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
 <%
+String nomc=(String)session.getAttribute("nomadmin");
+String sesion=(String)session.getAttribute("admin");
+String rol=(String)session.getAttribute("roles");
+if(sesion==null || sesion.equals("false")){
+   response.sendRedirect("login.jsp");
+}
 try{
 
 Conex con = new Conex();	
@@ -87,8 +93,14 @@ String fondo = null;
 					
 				</tbody>
 			</table>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal.jsp");
+			}
+		}				
 }%>

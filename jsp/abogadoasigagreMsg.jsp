@@ -5,12 +5,8 @@ String sesion=(String)session.getAttribute("admin");
 String rol=(String)session.getAttribute("roles");
 if(sesion==null || sesion.equals("false")){
    response.sendRedirect("login.jsp");
-}else{ 
-	if(!rol.equals("Admin")){
-		 response.sendRedirect("ilegal.jsp");
-	}
 }
-try{ 
+try{
 Conex con = new Conex();
 Conex conarea = new Conex();
 boolean flag=false;
@@ -119,11 +115,16 @@ function volver(frm){
 </tr>  
 	</tbody></table>
 </div>
-
 <jsp:include page="botoom.jsp" />
 </body></html>
-<%} catch(Exception e){
+<%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);
-		response.sendRedirect("error_fatal.jsp");
+		if(session.getAttribute("roles")!=null){			
+			if(!rol.equals("Admin")){
+				 response.sendRedirect("ilegal.jsp");
+			}else{
+				response.sendRedirect("error_fatal.jsp");
+			}
+		}				
 }%>

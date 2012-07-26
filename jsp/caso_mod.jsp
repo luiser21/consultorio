@@ -1,7 +1,5 @@
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*,db.*" errorPage="" pageEncoding="UTF-8"%>
 
-
-
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <%
 String nomc=(String)session.getAttribute("nomadmin");
