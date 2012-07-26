@@ -81,14 +81,6 @@ function generar(frm){
 		}
 }
 </script>
-</script>
-<script type="text/javascript" src="highslide/highslide-with-html.js"></script>
-<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
-<script type="text/javascript">
-    hs.graphicsDir = 'highslide/graphics/';
-    hs.outlineType = 'rounded-white';
-    hs.wrapperClassName = 'draggable-header';
-</script>
 <script language="JavaScript"   src="jquery/jquery-1.3.2.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -186,34 +178,28 @@ $(document).ready(function(){
                           <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="1"/>
                            </td>
                           <td align="center" class="text_negro">Torta</td>
-                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=1" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
-        		</a></td>
+                          <td align="center" class="text_negro">&nbsp;</td>
                           </tr>
                        
                         <tr class="fondo_celda_3">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="2"/>
                            </td>
                           <td align="center" class="text_negro">Barras</td>
-                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=2" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
-        		</a></td>
+                          <td align="center" class="text_negro">&nbsp;</td>
                         </tr>
                         
                         <tr class="fondo_celda_2">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="3"/>
                             </td>
                           <td align="center" class="text_negro">Lineal</td>
-                          <td align="center" class="text_negro"><a href="carries_forms/form_11.jsp?cc=3" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
-        		</a></td>
+                          <td align="center" class="text_negro">&nbsp;</td>
                         </tr>
                         
                         <tr class="fondo_celda_3">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="4"/>
                            </td>
                           <td align="center" class="text_negro">Area</td>
-                          <td align="center" class="text_negro">
-<a href="carries_forms/form_11.jsp?cc=4" style="text-decoration:none; cursor:pointer" onmousemove="return hs.htmlExpand(this, { objectType: 'iframe'} )"><img src="img/system-search.png" border='0' width="16" height="16">
-        		</a>
- </td>
+                          <td align="center" class="text_negro">&nbsp;</td>
                         </tr>
                                           
                       </table>						
