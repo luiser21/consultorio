@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-07-12 20:23:31 Hora est. del Pacífico de SA
+-- Started on 2012-07-27 21:10:33 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -11,8 +11,8 @@ SET client_min_messages = warning;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2294 (class 0 OID 17802)
--- Dependencies: 1959
+-- TOC entry 2295 (class 0 OID 17802)
+-- Dependencies: 1960
 -- Data for Name: estudiantes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -238,11 +238,14 @@ INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, obser
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (256, '60365677', 'DALIA ELVIR', 'PINEDA RAMIREZ', 'SI', NULL, 'SI', '12012');
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (257, '1091652783', 'JACKSON FABIHAN', 'RIOBO AVENDAÃ‘O', 'SI', NULL, 'SI', '12012');
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (258, '88214781', 'FABIO', 'URBINA GELVEZ', 'SI', NULL, 'SI', '12012');
-INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (259, '5531930', 'HERNY', 'RODRIGUEZ MARIN', 'SI', '', 'SI', '12012');
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (260, '90051675117', 'JESICA ANDREA', 'ALBARRACIN', 'SI', '', 'SI', '12012');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (259, '5531930', 'HENRY', 'MARIN RODRIGUEZ', 'SI', '', 'SI', '12012');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (261, '37180390', 'LAURA', 'SANTIAGO QUINTERO', 'SI', '', 'SI', '12012');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (262, '1090388773', 'YARITZA EMPERATRIZ', 'RANGEL SANGUINO', 'SI', '', 'SI', '12012');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (263, '1093755661', 'ANDREA YELITZA', 'GALLO', 'SI', '', 'SI', '12012');
 
 
--- Completed on 2012-07-12 20:23:32 Hora est. del Pacífico de SA
+-- Completed on 2012-07-27 21:10:33 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete

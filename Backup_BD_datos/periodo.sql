@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-07-12 20:23:32 Hora est. del Pacífico de SA
+-- Started on 2012-07-27 21:10:34 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -11,8 +11,8 @@ SET client_min_messages = warning;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2293 (class 0 OID 17730)
--- Dependencies: 1958
+-- TOC entry 2294 (class 0 OID 17730)
+-- Dependencies: 1959
 -- Data for Name: periodo; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -22,7 +22,7 @@ INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo
 INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo) VALUES ('12012', 1, 2012, '2012-04-09', NULL, 0);
 
 
--- Completed on 2012-07-12 20:23:32 Hora est. del Pacífico de SA
+-- Completed on 2012-07-27 21:10:34 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
