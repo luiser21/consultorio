@@ -32,13 +32,13 @@ if(!codigo.equals("null")){
 		opes[i][2]=rs2.getString("perradicado");
 		
 	}
-	for (int i = 0; i < codigo.length;i++) {		
-		actualiza2 = "update asignacion set casos=casos-1 where estudiante='"+opes[i][0]+"' and area='"+opes[i][1]+"' and periodo='"+periodo+"'";
-		con3.actualizar(actualiza2);
-		
+	for (int i = 0; i < codigo.length;i++) {			
+		if(opes[i][0]!=null){
+			actualiza2 = "update asignacion set casos=casos-1 where estudiante='"+opes[i][0]+"' and area='"+opes[i][1]+"' and periodo='"+periodo+"'";
+			con3.actualizar(actualiza2);
+		}
 		actualiza = "delete from personacaso where perradicado='"+opes[i][2]+"'";
-		con.actualizar(actualiza);
-		
+		con.actualizar(actualiza);		
 		
 	}	
 	con3.close();
