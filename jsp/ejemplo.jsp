@@ -46,7 +46,7 @@ document.getElementById("imgLOAD").style.display="none";
 			jQuery('#myTable1').gvChart({
 				chartType: 'AreaChart',
 				gvSettings: {
-					vAxis: {title: 'Radicados'},
+					vAxis: {title: 'Numero de Radicados'},
 					hAxis: {title: 'Periodos'},
 					width: 600,
 					height: 250
@@ -55,7 +55,16 @@ document.getElementById("imgLOAD").style.display="none";
 			jQuery('#myTable5').gvChart({
 				chartType: 'PieChart',
 				gvSettings: {
-					vAxis: {title: 'Radicados'},
+					vAxis: {title: 'Numero de Radicados'},
+					hAxis: {title: 'Periodo'},
+					width: 600,
+					height: 250
+					}
+			});
+			jQuery('#myTable4').gvChart({
+				chartType: 'ColumnChart',
+				gvSettings: {
+					vAxis: {title: 'Numero de Radicados'},
 					hAxis: {title: 'Periodo'},
 					width: 600,
 					height: 250
@@ -99,11 +108,31 @@ document.getElementById("imgLOAD").style.display="none";
 						<th>Radicados</th>
 						<% for(int ii=0;ii<cont;ii++){%>	
 						<td><%=opes[ii][1]%></td>
-						 <%}}%>	
+						 <%}%>	
 					</tr>
 					
 				</tbody>
 			</table>
+            			
+			<table id='myTable4'>
+				<thead>
+					<tr>
+						<th></th>
+                        <% for(int ii=0;ii<cont;ii++){%>		
+						<th><%=opes[ii][0]%></th>
+                     <%}%>		
+					</tr>                    
+				</thead>               
+				<tbody>                   
+                     <tr>
+                       <th>Radicados</th>
+                        <% for(int ii=0;ii<cont;ii++){%>		
+						<td><%=opes[ii][1]%></td>
+                     <%}%>	                       
+                   </tr>                                       
+				</tbody>              
+			</table>
+ <%}%>
          
 <%}catch(Exception e){
 		String error=e.toString(); 
