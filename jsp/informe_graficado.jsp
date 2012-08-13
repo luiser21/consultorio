@@ -44,7 +44,7 @@ document.getElementById("imgLOAD").style.display="none";
 <div id="texto_contenido"> 
 <div id='imgLOAD' style="TEXT-ALIGN: center"> 
 <br/> <br/><b>Generando el Grafico Por Favor espere.......</b><br/> <br/><br/> <br/>
-<img alt='LOADING' height='70' src='images/loading.gif' width='70'/> 
+<img alt='LOADING'  src='images/loadingAnimation.gif' '/> 
 </div>
   <jsp:include page="ejemplo.jsp" />
  </div>

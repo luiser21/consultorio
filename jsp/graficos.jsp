@@ -121,7 +121,7 @@ $(document).ready(function(){
 					<div>
                     Seleccione los tipos de graficos que quiere generar junto con el tipo de informacion </div></div>
 <form name="form1" method="post">
-  <div><br/><br/>
+  <div><br/>
   <table width="600" border="0" cellspacing="0" cellpadding="0">
   
   <tr>
@@ -147,9 +147,7 @@ $(document).ready(function(){
     <td width="144" align="left">
     <%if(buscar>0 && buscar<11){%>	
     <select name="periodo" class="combos">
-    
-      <option value="" >Seleccione...</option>
-	  <option value="0">Global</option>
+      <option value="0" selected="selected">Global</option>
 			<%for(int i=0;i<cont;i++){%>
      <option value="<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
             <%}%>    
@@ -160,47 +158,47 @@ $(document).ready(function(){
     </tr>  
   </table>            
   </div>
-   <br/><br/>	<div align="right" style=" width:530px; padding-bottom:1px;"><input name="" type="button"  onClick="javascript:generar(this.form)" class="botones" value="Procesar"></div>
-  <table width="450" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
+   <br/><br/>	
+   <div  style=" width:330px; padding-bottom:1px; float:left" align="center"><img src="img/graphs.jpg" width="151" height="115" />
+   
+   </div>
+  <table width="200" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
     <tr>
                     <td width="100%" height="17" valign="top">
                       <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
                           <td height="20" align="center" class="text_blanco"><input name="checktodos"   id="checktodos" type="checkbox"  value="" /></td>
-                          <td height="20" colspan="2" align="center" class="text_blanco">Tipos de Graficos</td>
+                          <td height="20" align="center" class="text_blanco">Tipos de Graficos</td>
                           </tr>
                         <tr class="fondo_celda_2">
                           <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="1"/>
                            </td>
-                          <td width="74%" align="center" class="text_negro">Torta</td>
-                          <td width="21%" align="center" class="text_negro"><img src="img/torta.png" width="30" height="30" /></td>
+                          <td align="center" class="text_negro">Torta</td>
                           </tr>
                        
                         <tr class="fondo_celda_3">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="2"/>
                            </td>
                           <td align="center" class="text_negro">Barras</td>
-                          <td align="center" class="text_negro"><img src="img/barras.png" width="30" height="30" /></td>
-                        </tr>
+                          </tr>
                         
                         <tr class="fondo_celda_2">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="3"/>
                             </td>
                           <td align="center" class="text_negro">Lineal</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
-                        </tr>
+                          </tr>
                         
                         <tr class="fondo_celda_3">
                           <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="4"/>
                            </td>
                           <td align="center" class="text_negro">Area</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
-                        </tr>
+                          </tr>
                                           
                       </table>						
                   </tr>
-              </table>
-  </form><br/>		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>	  
+              </table><br/><br/><br/>
+              <div align="center" style=" width:570px; padding-bottom:1px;"><input name="" type="button"  onClick="javascript:generar(this.form)" class="botones" value="Procesar"></div>
+  </form><br/><br/><br/><br/><br/><br/><br/><br/>	  
    </div>
 </div> 
  </td> </tr> 

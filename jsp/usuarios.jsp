@@ -209,9 +209,7 @@ function actionChange2(actionName, fileID, fileID2)
  <tbody><tr>  
  <td width="260" height="420" align="left" valign="top" bgcolor="#ffffff"> 
 <jsp:include page="menu.jsp" />
-<%if(contt!=0){%>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/team-icon.png" width="100" height="100" />
-<%}%>
+
 </td><td bgcolor="#ffffff" valign="top" width="687" align="left"> 
 
  <div id="pagina_contenido">
