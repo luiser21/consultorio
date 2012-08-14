@@ -80,7 +80,7 @@ document.getElementById("imgLOAD").style.display="none";
 					<tr>
                    		<th>PERIODOS</th>        
        				 <% for(int ii=0;ii<cont;ii++){%>						
-						<th><%=opes[ii][0]%></th>
+						<th><%=opes[ii][0]%>  Periodo</th>
                      <%}%>						
 					</tr>
 				</thead>

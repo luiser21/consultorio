@@ -48,7 +48,7 @@ if(ac.equals("cargar")){
 	}if(buscar==8){
 		response.sendRedirect("etnico_grafico.jsp?periodo="+periodo+"");
 	}if(buscar==9){	
-		response.sendRedirect("areas_grafico.jsp?periodo="+periodo+"");
+		response.sendRedirect("informe_area_grafico.jsp?periodo="+periodo+"");
 	}if(buscar==11){
 		response.sendRedirect("periodos_grafico.jsp?periodo="+periodo+"");
 	}       
@@ -195,7 +195,8 @@ default:
    <br/>  <div  align="right" style=" width:600px; padding-bottom:1px;"></div>
   </form>	
  <hr />
- 		 <jsp:include page="ejemplo.jsp" />
+ 		
+     <jsp:include page="ejemplo.jsp" />
   
    </div>
 </div> 
