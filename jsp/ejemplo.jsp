@@ -26,6 +26,7 @@ if(cont!=0){
 		total= total + Integer.parseInt(opes[ii][1]);
 		rs.next();
 	}
+}
 %>
 <script type="text/javascript" src="jScripts/jsapi.js"></script>
 <script type="text/javascript" src="jquery/jquery.gvChart-1.1.min.js"></script>
@@ -79,17 +80,17 @@ document.getElementById("imgLOAD").style.display="none";
 				<thead>
 					<tr>
                    		<th>PERIODOS</th>        
-       				 <% for(int ii=0;ii<cont;ii++){%>						
+       				 <% if(cont!=0){  for(int ii=0;ii<cont;ii++){%>						
 						<th><%=opes[ii][0]%>  Periodo</th>
-                     <%}%>						
+                     <%}}%>						
 					</tr>
 				</thead>
 					<tbody>
 					<tr>
                     	<th>RADICADOS</th> 
-                      <% for(int ii=0;ii<cont;ii++){%>	
+                      <% if(cont!=0){  for(int ii=0;ii<cont;ii++){%>	
 						<td><%=opes[ii][1]%></td>
-						 <%}%>	
+						 <%}}%>	
 					</tr>
 				</tbody>
 			</table>
@@ -97,18 +98,18 @@ document.getElementById("imgLOAD").style.display="none";
 				<thead>
 					<tr>
 						<th></th>
-                        <% for(int ii=0;ii<cont;ii++){%>		
+                        <% if(cont!=0){ for(int ii=0;ii<cont;ii++){%>		
 						<th><%=opes[ii][0]%></th>
-                     <%}%>	
+                     <%}}%>	
 						
 					</tr>
 				</thead>
 					<tbody>
 					<tr>
 						<th>Radicados</th>
-						<% for(int ii=0;ii<cont;ii++){%>	
+						<% if(cont!=0){ for(int ii=0;ii<cont;ii++){%>	
 						<td><%=opes[ii][1]%></td>
-						 <%}%>	
+						 <%}}%>	
 					</tr>
 					
 				</tbody>
@@ -118,22 +119,20 @@ document.getElementById("imgLOAD").style.display="none";
 				<thead>
 					<tr>
 						<th></th>
-                        <% for(int ii=0;ii<cont;ii++){%>		
+                        <% if(cont!=0){ for(int ii=0;ii<cont;ii++){%>		
 						<th><%=opes[ii][0]%></th>
-                     <%}%>		
+                     <%}}%>		
 					</tr>                    
 				</thead>               
 				<tbody>                   
                      <tr>
                        <th>Radicados</th>
-                        <% for(int ii=0;ii<cont;ii++){%>		
+                        <% if(cont!=0){ for(int ii=0;ii<cont;ii++){%>		
 						<td><%=opes[ii][1]%></td>
-                     <%}%>	                       
+                     <%}}%>	                       
                    </tr>                                       
 				</tbody>              
-			</table>
- <%}%>
-         
+			</table>        
 <%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);

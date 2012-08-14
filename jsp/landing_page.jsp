@@ -32,8 +32,8 @@ if(sesion==null || sesion.equals("false")){
                     </td>
                     <td bgcolor="#ffffff" valign="top" width="300px"  align="left"> 
                         <div id="pagina_contenido">
-                           <div class="actualizacion">Actualizado: <span>07/04/2012 10:27 AM</span></div>
-                                <jsp:include page="slider_imagen_menu_admin.jsp" />                                
+                           <div class="actualizacion">Actualizado: <span>07/04/2012 10:27 AM</span></div><br/><br/><br/><br/>
+                                <jsp:include page="slider_imagen_menu_admin.jsp" />    <br/><br/>  <br/><br/>                          
                        </div>                     
                     </td> 
                   </tr> 
