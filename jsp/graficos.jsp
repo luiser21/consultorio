@@ -9,6 +9,9 @@ if(sesion==null || sesion.equals("false")){
 try{
 int buscar;
 String auxx=String.valueOf(request.getParameter("buscar"));
+String ac=String.valueOf(request.getParameter("ac"));
+String periodo=String.valueOf(request.getParameter("periodo"));
+
 if(auxx.equals("null") || auxx.equals("") ){ buscar=0;}
 	else{ buscar=Integer.valueOf(auxx).intValue();}
 	
@@ -26,7 +29,31 @@ if(cont!=0){
 		opes[i][2]=rs.getString("perano");
 		rs.next();
 	}
-}%>
+}
+if(ac.equals("cargar")){	
+	if(buscar==1){
+		response.sendRedirect("municipio_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==2){
+		response.sendRedirect("embarazada_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==3){
+		response.sendRedirect("desplazado_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==4){
+		response.sendRedirect("sexo_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==5){
+		response.sendRedirect("edad_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==6){
+		response.sendRedirect("discapacitado_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==7){
+		response.sendRedirect("nacionalidad_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==8){
+		response.sendRedirect("etnico_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==9){	
+		response.sendRedirect("informe_area_grafico.jsp?periodo="+periodo+"");
+	}if(buscar==11){
+		response.sendRedirect("periodos_grafico.jsp?periodo="+periodo+"");
+	}       
+}
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head>
 <title>Jurisprudencia y Derecho - Unipamplona</title>
@@ -55,45 +82,15 @@ function generar(frm){
 			if(esVacio(frm.periodo.value)){
 				alert("Debe seleccionar un periodo.");
 				frm.periodo.select();
-			}
-		}
-		var y=0;		
-		for(var i = 0; i < frm.codigo.length; i++){		
-			if(frm.codigo[i].checked)y++;
-		}		
-		if(y>0 ) {
-			if(y>1){
-				frm.action="informe_graficado.jsp";
+			}else{
+				frm.action="graficos.jsp?ac=cargar";
 				frm.submit();
-				
-			}
-			if(y==1){
-				frm.action="informe_graficado.jsp";
-				frm.submit();
-				
-			}
+			}	
 		}else{
-				alert ("Debe seleccionar los tipos de graficos.");
+				frm.action="graficos.jsp?ac=cargar";
+				frm.submit();
 		}
 }
-</script>
-<script language="JavaScript"   src="jquery/jquery-1.3.2.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
- 
-	//Checkbox
-	$("input[name=checktodos]").change(function(){
-		$('input[type=checkbox]').each( function() {			
-			if($("input[name=checktodos]:checked").length == 1){
-				$("input[name=codigo]").prop("checked", true);
-				//$("input[name=area2]").checked = true;
-			} else {
-				$("input[name=codigo]").prop("checked", false);
-			}
-		});
-	});
- 
-});
 </script>
 </head>
 <body  onload="javascript:asignarzona(document.forms['form1'],'<% out.print(buscar);%>');">
@@ -120,16 +117,52 @@ $(document).ready(function(){
  <div id="msgBox_info" class="notification information png_bg">
 					<div>
                     Seleccione los tipos de graficos que quiere generar junto con el tipo de informacion </div></div>
-<form name="form1" method="post">
-  <div><br/><br/>
+<form name="form1" method="post" >
+  <div><br/>
   <table width="600" border="0" cellspacing="0" cellpadding="0">
   
   <tr>
-    <td>Generar Graficos Por:</td>
-    <td align="left">
-      
+    <td width="129">Generar Graficos Por:</td>
+    <td width="194" align="left">      
       <select name="buscar" class="combos"  onChange="javascript:cargarmun(document.forms['form1']);">
-        <option selected="selected" value="">Seleccione...</option>      
+           <%switch(buscar){ 
+	case 0:%>	
+        <option value="">Seleccione...</option>
+        <%
+	break;
+	case 1: %> 
+        <option value="1" >Municipio</option>
+        <% break;
+    case 2: %>	
+        <option value="2">Embarazada</option>
+        <% break;
+    case 3: %>	
+        <option value="3">Desplazados</option>
+        <% break;
+    case 4: %>	
+        <option value="4"  >Sexo</option>
+        <% break;
+    case 5: %>
+        <option value="5" >Edades</option>
+        <% break;
+    case 6: %>
+        <option value="6">Discapacitados</option>
+        <% break;
+    case 7: %>
+        <option value="7" >Nacionalidad</option>
+        <% break;
+    case 8: %>
+        <option value="8">Grupo Etnico Afrodescendiente</option>
+        <%break; 
+	 case 9: %>
+         <option value="9">Areas</option>
+        <%break; 
+	 case 11: %>
+         <option value="11" >Periodos</option>       
+        <%break; 
+default:
+}; %>
+         
         <option value="9">Areas</option>
         <option value="3">Desplazados</option>
         <option value="6">Discapacitados</option>
@@ -139,68 +172,32 @@ $(document).ready(function(){
         <option value="7" >Nacionalidad</option>
         <option value="1" >Municipio</option>
         <option value="11" >Periodos</option>
-        <option value="10" >Radicados</option>
         <option value="4"  >Sexo</option>
         
       </select></td>
-    <td width="67" align="left"><%if(buscar>0 && buscar<11){%>	Periodo: <%}%></td>
-    <td width="144" align="left">
+    <td width="49" align="left"><%if(buscar>0 && buscar<11){%>	Periodo: <%}%></td>
+    <td width="125" align="left">
     <%if(buscar>0 && buscar<11){%>	
     <select name="periodo" class="combos">
-    
-      <option value="" >Seleccione...</option>
-	  <option value="0">Global</option>
+      <option value="0" selected="selected">Global</option>
 			<%for(int i=0;i<cont;i++){%>
      <option value="<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
             <%}%>    
     </select>
     <%}%>
     </td>
-    <td width="4" align="left">&nbsp;</td>
+    <td width="103"  align="right"><span style=" width:600px; padding-bottom:1px;">
+      <input name="input" type="button"  onclick="javascript:generar(this.form)" class="botones" value="Procesar" />
+    </span></td>
     </tr>  
   </table>            
   </div>
-   <br/><br/>	<div align="right" style=" width:530px; padding-bottom:1px;"><input name="" type="button"  onClick="javascript:generar(this.form)" class="botones" value="Procesar"></div>
-  <table width="450" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
-    <tr>
-                    <td width="100%" height="17" valign="top">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
-                        <tr class="fondo_celda_1">
-                          <td height="20" align="center" class="text_blanco"><input name="checktodos"   id="checktodos" type="checkbox"  value="" /></td>
-                          <td height="20" colspan="2" align="center" class="text_blanco">Tipos de Graficos</td>
-                          </tr>
-                        <tr class="fondo_celda_2">
-                          <td width="5%" height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="1"/>
-                           </td>
-                          <td width="74%" align="center" class="text_negro">Torta</td>
-                          <td width="21%" align="center" class="text_negro"><img src="img/torta.png" width="30" height="30" /></td>
-                          </tr>
-                       
-                        <tr class="fondo_celda_3">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="2"/>
-                           </td>
-                          <td align="center" class="text_negro">Barras</td>
-                          <td align="center" class="text_negro"><img src="img/barras.png" width="30" height="30" /></td>
-                        </tr>
-                        
-                        <tr class="fondo_celda_2">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="3"/>
-                            </td>
-                          <td align="center" class="text_negro">Lineal</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
-                        </tr>
-                        
-                        <tr class="fondo_celda_3">
-                          <td height="20"  align="center" class="text_negro"><input  type="checkbox" name="codigo" value="4"/>
-                           </td>
-                          <td align="center" class="text_negro">Area</td>
-                          <td align="center" class="text_negro">&nbsp;</td>
-                        </tr>
-                                          
-                      </table>						
-                  </tr>
-              </table>
-  </form><br/>		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>	  
+   <br/>  <div  align="right" style=" width:600px; padding-bottom:1px;"></div>
+  </form>	
+ <hr />
+ 		
+     <jsp:include page="ejemplo.jsp" />
+  
    </div>
 </div> 
  </td> </tr> 
@@ -212,6 +209,7 @@ $(document).ready(function(){
 </tr>  
 	</tbody></table>
 </div>
+
 <jsp:include page="botoom.jsp" />
 </body></html>
 <%}catch(Exception e){
