@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-08-09 15:55:01 Hora est. del Pacífico de SA
+-- Started on 2012-08-16 15:55:02 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -547,7 +547,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (570, 1
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (571, 197, 'LABORAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (574, 198, 'PENAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (575, 198, 'LABORAL', '12012', 0);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (577, 199, 'PRIVADA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (578, 199, 'PENAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (579, 199, 'LABORAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (580, 200, 'PUBLICA', '12012', 0);
@@ -632,7 +631,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (706, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (707, 231, 'LABORAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (710, 232, 'PENAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (711, 232, 'LABORAL', '12012', 0);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (712, 233, 'PUBLICA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (714, 233, 'PENAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (715, 233, 'LABORAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (717, 234, 'PRIVADA', '12012', 0);
@@ -648,7 +646,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (731, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (732, 238, 'PUBLICA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (733, 238, 'PRIVADA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (735, 238, 'LABORAL', '12012', 0);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (737, 239, 'PRIVADA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (738, 239, 'PENAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (739, 239, 'LABORAL', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (741, 240, 'PRIVADA', '12012', 0);
@@ -802,7 +799,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (752, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (536, 189, 'PUBLICA', '12012', 4);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (537, 189, 'PRIVADA', '12012', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (827, 261, 'PUBLICA', '12012', 5);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (576, 199, 'PUBLICA', '12012', 7);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (831, 262, 'PUBLICA', '12012', 3);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (628, 212, 'PUBLICA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (509, 182, 'PRIVADA', '12012', 2);
@@ -843,7 +839,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (491, 1
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (573, 198, 'PRIVADA', '12012', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (801, 255, 'PRIVADA', '12012', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (608, 207, 'PUBLICA', '12012', 1);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (452, 168, 'PUBLICA', '12012', 25);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (624, 211, 'PUBLICA', '12012', 6);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (835, 263, 'PUBLICA', '12012', 3);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (736, 239, 'PUBLICA', '12012', 7);
@@ -855,10 +850,15 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (476, 1
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (428, 162, 'PUBLICA', '12012', 18);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (408, 157, 'PUBLICA', '12012', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (652, 218, 'PUBLICA', '12012', 14);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (644, 216, 'PUBLICA', '12012', 8);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (737, 239, 'PRIVADA', '12012', 1);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (644, 216, 'PUBLICA', '12012', 10);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (452, 168, 'PUBLICA', '12012', 28);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (712, 233, 'PUBLICA', '12012', 1);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (577, 199, 'PRIVADA', '12012', 1);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (576, 199, 'PUBLICA', '12012', 10);
 
 
--- Completed on 2012-08-09 15:55:01 Hora est. del Pacífico de SA
+-- Completed on 2012-08-16 15:55:02 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
