@@ -41,7 +41,7 @@ String periodo=String.valueOf(request.getParameter("periodo"));
   <table width="100%" border="0">
   <tr>
     <td width="27%">&nbsp;</td>
-    <td width="41%" align="center"><img src="img/printf.png" width="19" height="17" title="Imprimir Informe"  style="cursor:pointer"/></td>
+    <td width="41%" align="center"><img src="img/printf.png" width="19" height="17" title="Imprimir Informe"  onClick="javascript:window.open('areas_grafico.jsp?periodo=<%=periodo%>&print=1','popup', 'width =620, height = 800, scrollbars=yes ')"  style="cursor:pointer"/></td>
     <td width="32%" align="right"><input name="" type="button" class="botones" value=" Volver" onclick='history.go(-1)' ></td>
   </tr>
 </table>
