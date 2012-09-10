@@ -54,8 +54,9 @@ function continuar(frm){
   <p></p>
   <div id="texto_contenido">
  <div align="center" > 
-  <img src="img/printf.png" width="19" height="17"  title="Imprimir Informe" onClick="javascript:window.open('totales_imprimir.jsp','popup', 'width =620, height = 800, scrollbars=yes ')"  style="cursor:pointer"/></div><br/>
-   
+  <img src="img/printf.png" width="19" height="17"  title="Imprimir Informe" onClick="javascript:window.open('totales_imprimir.jsp','popup', 'width =650, height = 800, scrollbars=yes ')"  style="cursor:pointer"/></div><br/>
+  
+  <jsp:include page="total_grafico.jsp" />
 	<table width="600" border="0" cellspacing="0" cellpadding="0">
              
               <tr> 

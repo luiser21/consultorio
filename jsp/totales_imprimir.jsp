@@ -3,9 +3,12 @@
 String nomc=(String)session.getAttribute("nomadmin");
 String sesion=(String)session.getAttribute("admin");
 String rol=(String)session.getAttribute("roles");
-if(sesion==null || sesion.equals("false")){
-   response.sendRedirect("login.jsp");
-}
+if(sesion==null || sesion.equals("false")){%>
+	<script>
+   window.close();
+   </script>
+   <%
+   }
 try{
 Conex confechas = new Conex();
 ResultSet  rsfechas = confechas.consultar("sELECT Min(perfecha) as min, Max(perfechafinal) as max FROM periodo");	
@@ -18,22 +21,28 @@ rsfechas.next();
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='Scripts/jquery.min.js'></script>
 <link rel="shortcut icon" href="img/favicon.ico">
-
 </head>
-<body onload="window.print()" >
+<body bgcolor="#FFFFFF">
 <div id="texto_contenido">
-<div align="center">
-<p class="text_negro">UNIVERSIDAD DE PAMPLONA<br/>
+<div align="center" >
+<br/>
+<table>
+<tr>
+	<td><img src="images/unipamplona.png" width="70px" height="85px"/></td>
+	<td class="text_negro" style="font-size:12px; color:#036; font-family:"trebuchet MS", tahoma, arial;">UNIVERSIDAD DE PAMPLONA<br/>
   FACULTAD DE ARTES Y HUMANIDADES<br/>
   PROGRAMA DE DERECHO Y JURISPRUDENCIA<br/>
   CONSULTORIO JURIDICO<br/>
 SEDE VILLA DEL ROSARIO
-  
-</div>
+	</td>
+</tr>
+</table>
+</div><div align="center">
   <p class="text_negro">
     
-    <span  style="
+    <span align="center" style="
 	margin:0;
 	padding:0;
 	font-size:20px;
@@ -42,18 +51,19 @@ SEDE VILLA DEL ROSARIO
 	line-height:normal;
 	font-family:"trebuchet MS", tahoma, arial;
 
-	"><span >INFORME GLOBAL </span></span></p>
-  <table width="600" border="0" cellspacing="0" cellpadding="0">
+	"><span align="center">INFORME GLOBAL </span></span></div></p>
+	 <jsp:include page="total_grafico.jsp" /><br/><br/>
+  <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
              
               <tr> 
-                <td height="91"><table width="600" border="0" align="center" cellpadding="1" cellspacing="0"  class="fondo_tabla">
+                <td height="91"><table width="600" border="1" align="center" cellpadding="0" cellspacing="0"   bgcolor="#104070">
                   <tr>
                     <td valign="top" height="17">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
-                        <tr class="fondo_celda_1">
+                      <table width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="ffffff">
+                        <tr class="fondo_celda_1" bgcolor="#104070">
                           <td height="20" colspan="13" align="center" class="text_blanco">Listado de Totales </td>
                         </tr>
-                        <tr class="fondo_celda_2">
+                        <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                           <td height="20" colspan="8"  align="center" class="text_negro">Numero de Casos Recepcionados </td>
                           <td colspan="5" align="center" class="text_negro">Fecha</td>
 						  </tr>
@@ -65,9 +75,8 @@ SEDE VILLA DEL ROSARIO
 							String[][] opes = new String[cont][101];
 							rs.beforeFirst();
 							if(cont!=0){ 
-							rs.next();
-								for(int i=0;i<cont;i++)
-								{
+									int i=0;
+									rs.next();
 									opes[i][0]=rs.getString("total");
 									opes[i][1]=rs.getString("m");
 									opes[i][2]=rs.getString("f");
@@ -169,27 +178,20 @@ SEDE VILLA DEL ROSARIO
 									opes[i][98]=rs.getString("rango3");
 									opes[i][99]=rs.getString("rango5");
 									opes[i][100]=rs.getString("rango6");
-									rs.next();
-								}								
-								 int color = 1;
-								 String fondo = null;
-								 for(int i=0;i<cont;i++){				    
-									  fondo = "fondo_celda_5";
-									  if ((color%2)==0)
-										fondo = "fondo_celda_5";
-									  color += 1;
+															
+								 
 							%>
-                        <tr class="fondo_celda_5">
+                        <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                           <td height="20" colspan="8" align="center" class="text_negro" ><div align="center"><%= opes[i][0] %></div></td>
                           <td height="20" colspan="5" class="text_negro"><div align="center">Desde el&nbsp;&nbsp;<%					  
 						  out.print(rsfechas.getString("min")); %>&nbsp;&nbsp;Hasta el&nbsp;&nbsp;<%=rsfechas.getString("max") %></div></td>
 						  </tr>
 								
-                         <tr class="fondo_celda_1">
+                         <tr class="fondo_celda_1" style="background-color: #104070;">
                           <td height="20" colspan="5" align="center" class="text_blanco" ><div align="center">Tipo de Genero</div>                            <div align="center"></div></td>
                           <td height="20" colspan="9" align="center" class="text_blanco" >Edades Comprendidas en a&ntilde;os</td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="3" align="center" class="text_negro" >Sexo Masculino </td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Sexo Femenino</td>
                             <td height="20" align="center" class="text_negro" >0 - 14 </td>
@@ -199,7 +201,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center" class="text_negro" >35 - 50</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >mayor a  50 </td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
 						  
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][1] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][2] %></td>
@@ -210,11 +212,11 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center" class="text_negro" ><%= opes[i][99] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][100] %></td>
                             </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="8" align="center" class="text_blanco" >Tipo de Documento </td>
                             <td height="20" colspan="5" align="center" class="text_blanco" >Nacionalidad</td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td width="27" height="20" align="center" class="text_negro" >CC  </td>
                             <td width="42" align="center" class="text_negro" >TI</td>
                             <td colspan="2" align="center" class="text_negro" >CE </td>
@@ -225,7 +227,7 @@ SEDE VILLA DEL ROSARIO
                             <td colspan="2" align="center" class="text_negro" >Venezolana</td>
                             <td width="70" align="center" class="text_negro" >Otros</td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
 						    <td height="20" align="center" class="text_negro" ><%= opes[i][5] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][6] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][7] %></td>
@@ -236,11 +238,11 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][12] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][13] %></td>
                           </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="8" align="center" class="text_blanco" >Hombres con Libreta Militar </td>
                             <td height="20" colspan="5" align="center" class="text_blanco" >Personas que poseen SISBEN = <%= opes[i][14] %></td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="4" align="center" class="text_negro" >Primera</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Segunda</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >No Posee </td>
@@ -248,7 +250,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" >Nivel 2 </td>
                             <td height="20" align="center" class="text_negro" >No Poseen </td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="4" align="center" class="text_negro" ><%= opes[i][15] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][16] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][17] %></td>
@@ -256,27 +258,27 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][19] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][20] %></td>
                           </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="6" align="center" class="text_blanco" >Personas con Discapacidad </td>
                             <td height="20" colspan="7" align="center" class="text_blanco" >Personas pertenecientes a Grupos Etnicos </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="4" align="center" class="text_negro" >NO</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >SI</td>
                             <td height="20" colspan="4" align="center" class="text_negro" >NO</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >SI</td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="4" align="center" class="text_negro" ><%= opes[i][21] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][22] %></td>
                             <td height="20" colspan="4" align="center" class="text_negro" ><%= opes[i][23] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][24] %></td>
                             </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="8" align="center" class="text_blanco" >Personas Con nivel de Escolaridad </td>
                             <td height="20" colspan="5" align="center" class="text_blanco" >Tipo de Familias </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="2" align="center" class="text_negro" >Primaria</td>
                             <td width="46" height="20" align="center" class="text_negro" >Secundaria</td>
                             <td width="41" align="center" class="text_negro" >Tecnico</td>
@@ -288,7 +290,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" >Nuclear</td>
                             <td height="20" align="center" class="text_negro" >Extensa</td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][25] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][26] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][27] %></td>
@@ -300,10 +302,10 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][33] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][34] %></td>
                           </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" >Estado Civil </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="3" align="center" class="text_negro" >Soltero</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Casado</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Viudo</td>
@@ -311,7 +313,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" >Union Libre</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Otro</td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][35] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][36] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][37] %></td>
@@ -319,15 +321,15 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][39] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][40] %></td>
                             </tr>
-							<tr class="fondo_celda_1">
+							<tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" >Informacion Laboral </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="3" align="center" class="text_negro" >Personas que Laboran </td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Tipos de Trabajo </td>
                             <td height="20" colspan="7" align="center" class="text_negro" >Clase de Contrato </td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20" colspan="2" align="center" class="text_negro" >SI</td>
                             <td height="20" align="center" class="text_negro" >NO</td>
                             <td width="41" height="20" align="center" class="text_negro" >INDP.</td>
@@ -339,7 +341,7 @@ SEDE VILLA DEL ROSARIO
                             <td width="77" align="center" class="text_negro" >OTRO</td>
                             <td height="20"  colspan="2" align="center" class="text_negro" >NO </td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][45] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][46] %></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][47] %></td>
@@ -351,29 +353,29 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center" class="text_negro" ><%= opes[i][54] %></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][53] %></td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="13" align="center" class="text_negro" >Se encuentra afiliado a la Seguridad Social </td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20" colspan="4" align="center" class="text_negro" >Salud</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Pensi&oacute;n</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >ARP</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Otro</td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20" colspan="4" align="center" class="text_negro" ><%= opes[i][42]%></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][41]%></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][43]%></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][44]%></td>
                             </tr>
-							<tr class="fondo_celda_1">
+							<tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" >Resoluci&oacute;n de Conflictos </td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="6" align="center" class="text_negro" >Frecuencia en que se presentan los Conflictos en el Hogar </td>
                             <td height="20" colspan="7" align="center" class="text_negro" >Factor que ocasiona el conflicto </td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td width="27"  colspan="2" height="20" align="center" class="text_negro" > Diario</td>
                             <td width="46"  colspan="2" height="20" align="center" class="text_negro" >Semanal</td>
                             <td width="52" height="20" align="center" class="text_negro" >Ocasional</td>
@@ -383,7 +385,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center" colspan="2" class="text_negro" >Manejo de Roles </td>
                             <td height="20" align="center" colspan="2" class="text_negro" >Manejo de Autoridad</td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
 	  						
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][55] %></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][56] %></td>
@@ -394,11 +396,11 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center"  colspan="2" class="text_negro" ><%= opes[i][61] %></td>
                             <td height="20" align="center"  colspan="2" class="text_negro" ><%= opes[i][62] %></td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="6" align="center" class="text_negro" >Autores del Conflicto </td>
                             <td height="20" colspan="7" align="center" class="text_negro" >Tipo de Vivienda </td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20"  colspan="2" align="center" class="text_negro" >Padre-Madre</td>
                             <td height="20"  colspan="2" align="center" class="text_negro" >Padre-Hijos</td>
                             <td height="20"  colspan="1" align="center" class="text_negro" >Hermanos</td>
@@ -410,7 +412,7 @@ SEDE VILLA DEL ROSARIO
                             <td width="26" height="20" align="center" class="text_negro" >Lote</td>
                             <td width="70" height="20" align="center" class="text_negro" >Otro</td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20"   colspan="2" align="center" class="text_negro" ><%= opes[i][63] %></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][64] %></td>
                             <td height="20"  colspan="1" align="center" class="text_negro" ><%= opes[i][65] %></td>
@@ -422,10 +424,10 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" align="center" class="text_negro" ><%= opes[i][71]%></td>
                             <td height="20" align="center" class="text_negro" ><%= opes[i][72] %></td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="13" align="center" class="text_negro" >Tenencia</td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20" colspan="2" align="center" class="text_negro" >Propia</td>
                             <td height="20"  colspan="1" align="center" class="text_negro" >Arrendada</td>
                             <td height="20"  colspan="2" align="center" class="text_negro" >Amortizada</td>
@@ -435,7 +437,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20"  colspan="2" align="center" class="text_negro" >Invasion</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Otro</td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][73] %></td>
                             <td height="20"   colspan="1" align="center" class="text_negro" ><%= opes[i][74] %></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][75] %></td>
@@ -445,10 +447,10 @@ SEDE VILLA DEL ROSARIO
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][79] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][78] %></td>
                           </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="13" align="center" class="text_negro" >Servicios</td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20"  colspan="2" align="center" class="text_negro" >Agua</td>
                             <td height="20"  colspan="2" align="center" class="text_negro" >Luz</td>
                             <td height="20"  colspan="2" align="center" class="text_negro" >Alcantarillado</td>
@@ -456,7 +458,7 @@ SEDE VILLA DEL ROSARIO
                             <td height="20"  colspan="2" align="center" class="text_negro" >Tel&eacute;fono</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Recoleccion de Aseo </td>
                           </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][89]%></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][90]%></td>
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][91]%></td>
@@ -464,14 +466,14 @@ SEDE VILLA DEL ROSARIO
                             <td height="20"  colspan="2" align="center" class="text_negro" ><%= opes[i][93]%></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][94]%></td>
                             </tr>
-                           <tr class="fondo_celda_1">
+                           <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" >Historial de Atenci&oacute;n </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="7" align="center" class="text_negro" >Se encuentra en situaci&oacute;n de Desplazamiento </td>
                             <td height="20" colspan="6" align="center" class="text_negro" >Ha iniciado acciones juridicas previas </td>
                             </tr>
-                          <tr class="fondo_celda_4">
+                          <tr class="fondo_celda_4" style="background-color: #F4F4F4;">
                             <td height="20" colspan="4" align="center" class="text_negro" >SI</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >NO</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >SI</td>
@@ -483,28 +485,28 @@ SEDE VILLA DEL ROSARIO
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][83] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][84] %></td>
                             </tr>
-                          <tr class="fondo_celda_1">
+                          <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" > Area de Consulta </td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" colspan="5" align="center" class="text_negro" >Publica</td>
                             <td height="20" colspan="2" align="center" class="text_negro" >Privada</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Laboral</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Penal </td>
                             </tr>
-                          <tr class="fondo_celda_5">
+                          <tr class="fondo_celda_5" style="background-color: #FFFFFF;">
 						    <td height="20" colspan="5" align="center" class="text_negro" ><%= opes[i][85] %></td>
                             <td height="20" colspan="2" align="center" class="text_negro" ><%= opes[i][86] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][87] %></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><%= opes[i][88] %></td>
                             </tr>
-							<%}
+							<%
 							}else{
 							aux=false; }%>
-                            <tr class="fondo_celda_1">
+                            <tr class="fondo_celda_1" style="background-color: #104070;">
                             <td height="20" colspan="13" align="center" class="text_blanco" >Casos Por Municipio (Norte de Santander - Venezuela)</td>
                             </tr>
-                          <tr class="fondo_celda_2">
+                          <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                             <td height="20" align="center" class="text_negro" ><img src="img/colombia.jpg" width="30" height="30" border="0"></td>
                             <td height="20" colspan="9" align="center" class="text_negro" >Colombia - Departamento Norte de Santander</td>
                             <td height="20" colspan="3" align="center" class="text_negro" >Total</td>
@@ -536,12 +538,12 @@ SEDE VILLA DEL ROSARIO
 							  int color = 1;
 							  String fondo = null;
 							 for(int i=0;i<contmuni;i++){				    
-								  fondo = "fondo_celda_3";
+								  fondo = "background-color: #FFFFFF;";
 								  if ((color%2)==0)
-									fondo = "fondo_celda_4";
+									fondo = "background-color: #F4F4F4;";
 								  color += 1;
 							if(opesmun[i][0]!=null){%>                          
-                          <tr class="<%= fondo %>">
+                          <tr style="<%= fondo %>">
                             <td height="20" colspan="10" align="center" class="text_negro" ><div align="center"><%= opesmun[i][0] %> </div></td><%
 							int dep=Integer.valueOf(opesmun[i][1]).intValue();
 							y=y+dep;
@@ -551,11 +553,11 @@ SEDE VILLA DEL ROSARIO
                           <%}}
 					}else{
 					auxmun=false;
-				 %><tr align="center" class="fondo_celda_5">
+				 %><tr align="center" class="fondo_celda_5" style="background-color: #FFFFFF;">
                           <td height="20" class="text_negro" colspan="13">No se encontraron registros.</td>                        </tr>   <%}%>               
                                      
                           
-						   <tr class="fondo_celda_2"> 
+						   <tr class="fondo_celda_2" style="background-color: #D8ECF7;">
                                  <td height="20" align="center" class="text_negro" ><img src="img/venezuela.jpg" width="30" height="30" border="0"></td>                        
                             <td height="20" colspan="9" align="center" class="text_negro" ><div align="center">Venezuela - Estado Tachira</div></td>
                             <td height="20" colspan="3" align="center" class="text_negro" ><div align="center">Total</div></td>                            
@@ -573,12 +575,12 @@ SEDE VILLA DEL ROSARIO
 							  int color = 1;
 							  String fondo = null;
 							 for(int i=0;i<contmunive;i++){				    
-								  fondo = "fondo_celda_3";
+								  fondo = "background-color: #FFFFFF;";
 								  if ((color%2)==0)
-									fondo = "fondo_celda_4";
+									fondo = "background-color: #F4F4F4;";
 								  color += 1;
 							%>                          
-                          <tr class="<%= fondo %>">
+                          <tr style="<%=fondo%>">
                        
                             <td height="20" colspan="10" align="center" class="text_negro" ><div align="center"><%= opesmunve[i][0] %> </div></td><%
                             int dep=Integer.valueOf(opesmunve[i][1]).intValue();
@@ -588,9 +590,9 @@ SEDE VILLA DEL ROSARIO
 						  <%}
 					}else{
 					auxmunve=false;
-				 %><tr align="center" class="fondo_celda_5">
+				 %><tr align="center" class="fondo_celda_5" style="background-color: #FFFFFF;">
                           <td height="20" class="text_negro" colspan="13">No se encontraron registros.</td>                        </tr><%}%>
-						  <tr align="center" class="fondo_celda_2">
+						  <tr align="center" class="fondo_celda_2" style="background-color: #D8ECF7;">
 						    <td height="20" colspan="10" class="text_negro" align="right">Total SUM:</td>
 						    <td height="20" colspan="3" class="text_negro"><%=y+j%></td>
 						    </tr>   
@@ -606,6 +608,7 @@ SEDE VILLA DEL ROSARIO
             </table>
 </div>
 <p>&nbsp;</p>
+<h1 style="font-size:10px; color:#036; font-family:"trebuchet MS", tahoma, arial;" >HERsoft Gestion Documental - version 4.1
 </body></html>
 <%}catch(Exception e){
 		String error=e.toString(); 
@@ -618,3 +621,4 @@ SEDE VILLA DEL ROSARIO
 			}
 		}				
 }%>
+<script>	  setTimeout ("window.print();", 1000); </script>
