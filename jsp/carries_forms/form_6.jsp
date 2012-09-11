@@ -479,7 +479,9 @@ a&ntilde;os
                               <td align="center" class="text_negro">Apellido</td>
                               <td height="20" colspan="3" align="center" class="text_negro">Documento de Identificacion</td>
                             </tr>
-                            <%String es=rs.getString("estuid");							
+							
+                     <!--   ---------------Del PEriodo 12011 en adelante --> 
+	                        <%String es=rs.getString("estuid");							
 							if(es==null){%>							
 							 <tr class="fondo_celda_5">
                              <td height="20" colspan="6"align="center" class="text_negro">No posee Abogado Asignado</td>
@@ -493,8 +495,9 @@ a&ntilde;os
                               <td height="20"align="center" class="text_negro"><%=ress.getString("nombre")%></td>
                               <td align="center" class="text_negro"><%=ress.getString("apellido")%></td>
                               <td height="20" colspan="4" align="center" class="text_negro"><%=ress.getString("identificacion")%></td>
-                            </tr><%}%>
-                            
+                            </tr>
+							<%}%>
+                      <!--  -------------------------------------------------------------- -->       
                             <tr class="fondo_celda_1">
                               <td height="23" colspan="5"align="center" class="text_blanco"><span class="Estilo6">ABOGADO EN FORMACION QUE SISTEMATIZA </span></td>
                             </tr>

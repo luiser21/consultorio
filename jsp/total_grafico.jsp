@@ -39,7 +39,7 @@ function detectarCarga(){
 document.getElementById("imgLOAD").style.display="none"; 
 } 
 </script>
-<div id='imgLOAD' style="TEXT-ALIGN: center"> 
+<div id='imgLOAD' style="TEXT-ALIGN: center; width:600px;" > 
 <br/><br/><b>Generando el Grafico Por Favor espere.......</b><br/> <br/><br/> <br/>
 <img alt='LOADING'  src='images/loadingAnimation.gif'/> 
 </div>
@@ -63,7 +63,7 @@ document.getElementById("imgLOAD").style.display="none";
 					<tr>
 						<th></th>
                         <% if(cont!=0){ for(int ii=0;ii<cont;ii++){%>		
-						<th><%=opes[ii][0]%></th>
+						<th><%=opes[ii][0]%>  Radicados: <%=opes[ii][1]%></th>
                      <%}}%>	
 						
 					</tr>

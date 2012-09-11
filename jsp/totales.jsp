@@ -45,6 +45,7 @@ function continuar(frm){
   <td><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100px"> 
  <tbody><tr>  
  <td width="260" height="450" align="left" valign="top" bgcolor="#ffffff"> 
+
 <jsp:include page="menu.jsp" />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/reports_98403.jpg" width="100" height="100" /></td><td bgcolor="#ffffff" valign="top" width="300px" align="left"> 
 

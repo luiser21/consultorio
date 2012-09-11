@@ -46,7 +46,7 @@ int i=0;
 <script language="JavaScript" src="jScripts/retrocesoSinObjetos.js"></script>
 <script language="JavaScript" src="jScripts/validaciones.js"></script>
 <script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script> 
-
+<script language="JavaScript" type="text/javascript" src="jScripts/codigo.js"></script>
 <script language="JavaScript">
 function volver(frm){
 
@@ -79,6 +79,40 @@ function exportar(frm){
 		frm.action="abogrecepciona_excel.jsp";
 		frm.submit();		
 }
+
+function OcultarFilas(Fila, Fila2) {
+    var elementos = document.getElementsByName(Fila);
+	var elementos2 = document.getElementsByName(Fila2);
+    for (k = 0; k< elementos.length; k++) {
+               elementos[k].style.display = "none";
+    }
+	for (kk = 0; kk< elementos2.length; kk++) {
+               elementos2[kk].style.display ="inline";
+    }
+	
+}
+function MostrarFilas(Fila, Fila2) {
+var elementos = document.getElementsByName(Fila);
+    for (i = 0; i< elementos.length; i++) {
+        if(navigator.appName.indexOf("Microsoft") > -1){
+               var visible = 'block'
+        } else {
+               var visible = 'table-row';
+        }
+	elementos[i].style.display = visible;
+        }
+		
+var elementos2 = document.getElementsByName(Fila2);
+    for (ii = 0; ii< elementos2.length; ii++) {
+        if(navigator.appName.indexOf("Microsoft") > -1){
+               var visible = 'block'
+        } else {
+               var visible = 'table-row';
+        }
+	elementos2[ii].style.display = "none";
+        }
+}
+
 </script>
 <script>
 	$(document).ready(function(){
@@ -200,12 +234,16 @@ rs.beforeFirst();
 								  color += 1;
 							%>
                         <tr class="<%= fondo %>">
-                          <td width="5%" height="20" align="center"><span class="text_negro">
+						 <td width="4%" align="center">
+<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_4.jsp?codigo=<%= opes[ii][0] %>&periodo=<%=periodo%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicados Asginados" style="cursor:pointer"/>
+<img src="img/list-remove.png" onclick="javascript:OcultarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>')" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>" style="display:none" title="Ocultar" style="cursor:pointer"/>
+	 </td>         
+                      <!--    <td width="5%" height="20" align="center"><span class="text_negro">
                           
  <a href="carries_forms/form_4.jsp?codigo=<%=opes[ii][0]%>&periodo=<%=periodo%>" class='iframe_ver'>
  <img src="img/system-search.png"  width="16" height="16"  title="Ver Radicado" style="cursor:pointer"/>
  </a>
- </span></td>
+ </span></td> -->
                           <td width="3%" height="20" class="text_negro" align="center"><%=dep%></td>
                           <td width="13%" height="20" class="text_negro"><div align="left">&nbsp; &nbsp;<%= opes[ii][0] %> </div></td>
                           <td height="20" class="text_negro"><div align="left">&nbsp; &nbsp;&nbsp;<%= opes[ii][1] %>  &nbsp; &nbsp;<%= opes[ii][2] %> 
@@ -232,6 +270,12 @@ rs.beforeFirst();
                           <td height="20" class="text_negro" align="center"><%= opes[ii][6] %></td>
                           <td height="20" class="text_negro"><div align="center">&nbsp; &nbsp;<%= opes[ii][7] %> </div></td>
                         </tr>
+						 <tr align="center" class="fondo_celda_5" style="display:none" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>">
+                              <td height="20" class="text_negro" colspan="11"> 
+							  		<div style="height:415px; overflow:scroll;" id="contenido_<%=opes[ii][0]%>">
+									</div> 
+								</td>
+                            </tr>
                          <%
 							dep++;
 							}
