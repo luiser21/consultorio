@@ -60,6 +60,7 @@ if(ac.equals("cargar")){
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="img/favicon.ico"><link href="images/estilo.css" rel="stylesheet" type="text/css">
+
 <link href="css/estilo.css" rel="stylesheet" type="text/css"> 
 <script language="JavaScript" src="jScripts/validaciones.js"></script>
 <script language="JavaScript">
@@ -122,7 +123,7 @@ function generar(frm){
   <table width="600" border="0" cellspacing="0" cellpadding="0">
   
   <tr>
-    <td width="129">Generar Graficos Por:</td>
+    <td width="129">Generar <br/>Graficos Por:</td>
     <td width="194" align="left">      
       <select name="buscar" class="combos"  onChange="javascript:cargarmun(document.forms['form1']);">
            <%switch(buscar){ 
@@ -186,8 +187,10 @@ default:
     </select>
     <%}%>
     </td>
-    <td width="103"  align="right"><span style=" width:600px; padding-bottom:1px;">
-      <input name="input" type="button"  onclick="javascript:generar(this.form)" class="botones" value="Procesar" />
+	<td align="right"><input name="input" type="button"  onclick="javascript:window.open('ejemplo.jsp?print=1','popup', 'width =620, height = 800, scrollbars=yes ')" class="botones" value="Imprimir" />
+  </td>
+    <td align="right"><span style=" width:600px; padding-bottom:1px;">
+	     <input name="input2" type="button"  onclick="javascript:generar(this.form)" class="botones" value="Procesar" />
     </span></td>
     </tr>  
   </table>            

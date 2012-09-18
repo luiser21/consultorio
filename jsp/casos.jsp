@@ -84,6 +84,7 @@ int i=0;
 <link rel="shortcut icon" href="img/favicon.ico">
 <script language="JavaScript" src="jScripts/retrocesoSinObjetos.js"></script>
 <script language="JavaScript" src="jScripts/validaciones.js"></script>
+<script language="JavaScript" type="text/javascript" src="jScripts/codigo.js"></script>
 <script language="JavaScript">
 function eliminar(frm){
 		var y=0;
@@ -175,6 +176,7 @@ function exportar(frm){
 		frm.action="casos_excel.jsp";
 		frm.submit();		
 }
+
 </script>
 
 <script language="JavaScript"   src="jquery/jquery-1.3.2.min.js"></script>
@@ -199,6 +201,40 @@ function actionChange2(actionName, fileID, fileID2)
 	/*show_div_loader();*/
 	window.location = "casos.jsp?dep="+<%=dep%>+"&id=" + fileID + "&periodo=" + fileID2 + "&ac=" + actionName;
 }
+
+function OcultarFilas(Fila, Fila2) {
+    var elementos = document.getElementsByName(Fila);
+	var elementos2 = document.getElementsByName(Fila2);
+    for (k = 0; k< elementos.length; k++) {
+               elementos[k].style.display = "none";
+    }
+	for (kk = 0; kk< elementos2.length; kk++) {
+               elementos2[kk].style.display ="inline";
+    }
+	
+}
+function MostrarFilas(Fila, Fila2) {
+var elementos = document.getElementsByName(Fila);
+    for (i = 0; i< elementos.length; i++) {
+        if(navigator.appName.indexOf("Microsoft") > -1){
+               var visible = 'block'
+        } else {
+               var visible = 'table-row';
+        }
+	elementos[i].style.display = visible;
+        }
+		
+var elementos2 = document.getElementsByName(Fila2);
+    for (ii = 0; ii< elementos2.length; ii++) {
+        if(navigator.appName.indexOf("Microsoft") > -1){
+               var visible = 'block'
+        } else {
+               var visible = 'table-row';
+        }
+	elementos2[ii].style.display = "none";
+        }
+}
+
 </script>
 <script>
 	$(document).ready(function(){
@@ -285,7 +321,7 @@ function actionChange2(actionName, fileID, fileID2)
 
  <div id="pagina_contenido">
   <div class="actualizacion">Administrador - Consultorio</div>
-  <h1 >Agregar Nuevo Radicado / Periodo: <%=periodo%></h1>
+  <h1 >Listado de Radicados / Periodo: <%=periodo%></h1>
   <p></p><br/>
      <%if(rol.equals("Estudiante")){		
 			if(rs_periodo.getString("activo").equals("1")){%>
@@ -310,7 +346,7 @@ function actionChange2(actionName, fileID, fileID2)
                         <td width="96%">- Puede Buscar por N° de Radicado y por los nombres de los demandantes. </td>
                       </tr>
                      
-                    <%if(no_asignado!=0){%>
+                    <%if(!periodo.equals("22010") && no_asignado!=0){%>
                       <tr>
                         <td>
                         <a class='iframe_fal_estu' href="carries_forms/form_9.jsp?periodo=<%=periodo%>"><img src="img/x-office-spreadsheet.png" width="16" height="16"  style="cursor:pointer"/></a></td>
@@ -338,8 +374,10 @@ function actionChange2(actionName, fileID, fileID2)
                 
                   	<div align="right"  style=" padding-bottom:1px;"> 		
 <%if(contt!=0){%>
+		<%if(!periodo.equals("22010")){%>
 		 <input name="input" type="button" class="botones" onClick="javascript:exportar(document.forms['form1'])"  value=" Exportar a Excel " />
-        <%if(rol.equals("Estudiante")){		
+        <%}%>
+		<%if(rol.equals("Estudiante")){		
 			if(rs_periodo.getString("activo").equals("0")){%>
 				  <%if(cont>1){%>
                         <input name="" type="button"  onClick="javascript:modificar(document.forms['form1'])" class="botones" value="Modificar">
@@ -374,7 +412,7 @@ function actionChange2(actionName, fileID, fileID2)
     <tr>
                     <td  height="17" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
-                          <td height="20" colspan="7"  align="center" class="text_blanco">Listado de Casos                     </td>
+                          <td height="20" colspan="8"  align="center" class="text_blanco">Listado de Casos                     </td>
                           <td height="20" colspan="3"  align="center" class="text_blanco"><%
 						 if(buscar=="null" || buscar==""){ 
 						  if(contt>0){%>
@@ -384,10 +422,10 @@ function actionChange2(actionName, fileID, fileID2)
                             <%}}%></td>
                           </tr>
                         <tr class="fondo_celda_2">
+                          <td width="4%"  align="center" class="text_negro">Ver</td>
                           <td width="4%" height="20"  align="center" class="text_negro"><%if(cont>1){%>
                             <input name="checktodos"   id="checktodos" type="checkbox"  value="" />
-                            <%}%>
-                    </td>
+                            <%}%>                    </td>
                           <td width="4%" align="center" class="text_negro" colspan="1">N&ordm;</td>
                           <td width="8%" align="center" class="text_negro">Radicado N&ordm; </td>
                           <td width="37%" align="center" class="text_negro" colspan="1">Nombres y Apellidos </td>
@@ -395,7 +433,7 @@ function actionChange2(actionName, fileID, fileID2)
                           <td width="10%" align="center" class="text_negro">Hora</td>
                           <td width="7%" align="center" class="text_negro">Recibido</td>
                           <td width="10%" align="center" class="text_negro">Asignar Estudiante</td>
-                          <td width="5%" align="center" class="text_negro">Ver Radicado</td>
+                        <!--  <td width="5%" align="center" class="text_negro">Ver Radicado</td> -->
                           <%if(rol.equals("Admin")){%>
                           <td width="5%" align="center" class="text_negro">Eliminar Radicado</td>
                           <%}%>
@@ -427,47 +465,57 @@ function actionChange2(actionName, fileID, fileID2)
 									fondo = "fondo_celda_4";
 								  color += 1;
 							%>
-                        <tr class="<%= fondo %>">                         
-                          <td width="4%" height="20" align="center">
+                        <tr class="<%= fondo %>">
+						 <%if(!periodo.equals("22010") && opes[ii][6]==null){ %>   
+                          <td width="4%" align="center" class="text_negro" style=" background-color:#FF8080">
+<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
+<img src="img/list-remove.png" onclick="javascript:OcultarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>')" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>" style="display:none" title="Ocultar" style="cursor:pointer;"/>
+	 </td>                       
+                          <td width="4%" height="20" align="center" class="text_negro" style=" background-color:#FF8080">
                           <%if(cont>1){%>
                           <input type="checkbox" name="cc" value="<%= opes[ii][0] %>"/>      
                           <%}if(cont==1){%>
                           <input  type="radio" name="cc" value="<%= opes[ii][0] %>"/>  
-						  <%}%>
-                                  </td>
-                           <%if(opes[ii][6]==null){ %> 
-                          <td height="20" class="text_rojo"><div align="center"> <%=y%></div></td>
-                          <td height="20" class="text_rojo"><div align="center"> <%= opes[ii][0] %></div></td>                  
+						  <%}%>                                 
+						 					   </td>
+                          
+                          <td height="20" class="text_negro" style=" background-color: #FF8080"><div align="center"> <%=y%></div></td>
+                          <td height="20" class="text_negro" style=" background-color:#FF8080"><div align="center"> <%= opes[ii][0] %></div></td>                  
                         
-                          <td height="20" class="text_rojo" colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
+                          <td height="20" class="text_negro" style=" background-color:#FF8080" colspan="1"><div align="left"><%= opes[ii][1] %>&nbsp;&nbsp;&nbsp;<%= opes[ii][2] %></div></td>
                          
-                          <td height="20" class="text_rojo" colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
-                          <td height="20" class="text_rojo"><div align="center"><%= opes[ii][4] %></div></td>
-                          <td height="20" align="center" class="text_rojo"><%=opes[ii][5]%>                              </td>
-                          <td height="20" align="center" class="text_rojo">
+                          <td height="20" class="text_negro" style=" background-color:#FF8080" colspan="1"><div align="center"><%= opes[ii][3] %></div></td>
+                          <td height="20" class="text_negro" style=" background-color:#FF8080"><div align="center"><%= opes[ii][4] %></div></td>
+                          <td height="20" align="center" class="text_negro" style=" background-color:#FF8080"><%=opes[ii][5]%>                              </td>
+                          <td height="20" align="center" class="text_negro" style=" background-color:#FF8080">
                            <%if(rol.equals("Estudiante")){		
 								if(rs_periodo.getString("activo").equals("0")){%>
                                        <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
-                                      <img src="img/executive.png"  title="Asignar Estudiante" width="16" height="16" />
-                                      </a>
+                                      <img src="img/executive.png"  title="Asignar Estudiante" width="16" height="16" />                                      </a>
                            <%	}else{%>
                            			 <img src="img/executive2.png"  title="Asignar Estudiante" width="16" height="16" />
 						   <%	}
 						   }else{%>
                            		 <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
-                                      <img src="img/executive.png"  title="Asignar Estudiante" width="16" height="16" />
-                                    </a>
-                         <%}%>
-                          </td>
-                          <td height="20" align="center" class="text_rojo">
+                                      <img src="img/executive.png"  title="Asignar Estudiante" width="16" height="16" />                                    </a>
+                         <%}%>                          </td>
+                         <!-- <td height="20" align="center" class="text_rojo">
                            <a class='iframeradi' href="carries_forms/form_6.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>">
-                          <img src="img/edit-find.png" width="16"  title="Ver Radicado" height="16" />
-                          </a>
-                          </td>
+                          <img src="img/edit-find.png" width="16"  title="Ver Radicado" height="16" />                          </a>                          </td> -->
                           <%if(rol.equals("Admin")){%>
-                          <td height="20" align="center" class="text_rojo"><img src="img/user-trash-full.png" width="14"  title="Eliminar Radicado" height="14" onclick='javascript:actionChange2("eliminar", "<%= opes[ii][0]%>", "<%=periodo%>")' style="cursor:pointer"/></td>
+                          <td height="20" align="center" class="text_negro" style=" background-color:#FF8080"><img src="img/user-trash-full.png" width="14"  title="Eliminar Radicado" height="14" onclick='javascript:actionChange2("eliminar", "<%= opes[ii][0]%>", "<%=periodo%>")' style="cursor:pointer"/></td>
                           <%}}else{%>
-   
+						   <td width="4%" align="center">
+<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
+<img src="img/list-remove.png" onclick="javascript:OcultarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>')" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>" style="display:none" title="Ocultar" style="cursor:pointer;"/>
+	 </td>                
+   							  <td width="4%" height="20" align="center">
+                          <%if(cont>1){%>
+                          <input type="checkbox" name="cc" value="<%= opes[ii][0] %>"/>      
+                          <%}if(cont==1){%>
+                          <input  type="radio" name="cc" value="<%= opes[ii][0] %>"/>  
+						  <%}%>                                 
+						 					   </td>
                           <td height="20" class="text_negro"><div align="center"> <%=y%></div></td>
                           <td height="20" class="text_negro"><div align="center"> <%= opes[ii][0] %></div></td>                  
                         
@@ -480,35 +528,36 @@ function actionChange2(actionName, fileID, fileID2)
                           <%if(rol.equals("Estudiante")){		
 								if(rs_periodo.getString("activo").equals("0")){%>
                                        <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
-                                      <img src="img/executive.png" width="16" height="16"  title="Asignar Estudiante"/>
-                                      </a>
+                                      <img src="img/executive.png" width="16" height="16"  title="Asignar Estudiante"/>                                      </a>
                             <%	}else{%>
                            			 <img src="img/executive2.png"  title="Asignar Estudiante" width="16" height="16" />
 						   <%	}
 						   }else{%>
                            		  <a class='iframeestu' href="carries_forms/form_7.jsp?id=<%=opes[ii][0] %>&periodo=<%=periodo%>&dep=<%=dep%>">
-                                      <img src="img/executive.png" width="16" height="16"  title="Asignar Estudiante"/>
-                                    </a>
-                         <%}%>
-                          </td>
-                          <td height="20" align="center" class="text_negro">
+                                      <img src="img/executive.png" width="16" height="16"  title="Asignar Estudiante"/>                                    </a>
+                         <%}%>                          </td>
+                        <!--  <td height="20" align="center" class="text_negro">
                            <a class='iframeradi' href="carries_forms/form_6.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>">
-                          <img src="img/edit-find.png" width="16" height="16"  title="Ver Radicado"/>
-                          </a>
-                          </td>
+                          <img src="img/edit-find.png" width="16" height="16"  title="Ver Radicado"/>                          </a>                          </td> -->
                           <%if(rol.equals("Admin")){%>
                             <td height="20" align="center" class="text_rojo"><img src="img/user-trash-full.png" width="14"  title="Eliminar Radicado" height="14" onclick='javascript:actionChange2("eliminar", "<%= opes[ii][0]%>", "<%=periodo%>")' style="cursor:pointer"/></td>
                            <%}}%>
                         </tr>
-                         
+                         <tr align="center" class="fondo_celda_5" style="display:none" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>">
+                              <td height="20" class="text_negro" colspan="11"> <br/>
+							  		<div style="height:415px; overflow:scroll;" id="contenido_<%=opes[ii][0]%>">
+									</div> <br/>
+								</td>
+                            </tr>
                        	    <%
 							y++;
 							}
 					}else{
 					aux=false;
 				 %>
-                        <tr align="center" class="fondo_celda_5">
-                          <td height="20" class="text_negro" colspan="10">No se encontraron registros.</td>
+                            
+                            <tr align="center" class="fondo_celda_5">
+                          <td height="20" class="text_negro" colspan="11">No se encontraron registros.</td>
                         </tr>
                        
                         <%}%>

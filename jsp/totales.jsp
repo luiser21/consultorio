@@ -45,6 +45,7 @@ function continuar(frm){
   <td><table border="0" cellpadding="0" cellspacing="0" width="100%" height="100px"> 
  <tbody><tr>  
  <td width="260" height="450" align="left" valign="top" bgcolor="#ffffff"> 
+
 <jsp:include page="menu.jsp" />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/reports_98403.jpg" width="100" height="100" /></td><td bgcolor="#ffffff" valign="top" width="300px" align="left"> 
 
@@ -54,8 +55,9 @@ function continuar(frm){
   <p></p>
   <div id="texto_contenido">
  <div align="center" > 
-  <img src="img/printf.png" width="19" height="17"  title="Imprimir Informe" onClick="javascript:window.open('totales_imprimir.jsp','popup', 'width =620, height = 800, scrollbars=yes ')"  style="cursor:pointer"/></div><br/>
-   
+  <img src="img/printf.png" width="19" height="17"  title="Imprimir Informe" onClick="javascript:window.open('totales_imprimir.jsp','popup', 'width =650, height = 800, scrollbars=yes ')"  style="cursor:pointer"/></div><br/>
+  
+  <jsp:include page="total_grafico.jsp" />
 	<table width="600" border="0" cellspacing="0" cellpadding="0">
              
               <tr> 

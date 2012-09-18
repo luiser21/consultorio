@@ -339,10 +339,18 @@ a&ntilde;os
 							  <%=rs.getString("perotro")%><%}%></label>
                               <br></td>
                               <td height="20" colspan="3" align="center" class="text_negro"><%=rs.getString("perocupaconyu")%></td>
-                            </tr>
+                            </tr>							
                             <tr class="fondo_celda_1">
                               <td height="20" colspan="5" align="center" class="text_blanco"><span class="Estilo6">HISTORIAL DE ATENCION</span></td>
                             </tr>
+							<%if(rs.getString("perdesplazado").equals("NO")){%>   
+							<tr class="fondo_celda_2">
+                              <td height="20" align="center" colspan="5" class="text_negro">Se encuentra en situacion de Desplazamiento</td>                              
+                            </tr>
+                            <tr class="fondo_celda_5">
+                              <td height="20" align="center" colspan="5" class="text_negro"><%=rs.getString("perdesplazado")%> </td>                              
+                            </tr>
+							<%}if(rs.getString("perdesplazado").equals("SI")){%>   
                             <tr class="fondo_celda_2">
                               <td height="20" align="center" class="text_negro">Se encuentra en situacion de Desplazamiento</td>
                               <td height="20" colspan="4" align="center" class="text_negro">Lugar de Desplazamiento</td>
@@ -371,6 +379,7 @@ a&ntilde;os
                             <tr class="fondo_celda_5">
                               <td height="20" colspan="5" align="center" class="text_negro"><%=rs.getString("pergrupo")%></td>
                             </tr>
+							
                             <tr class="fondo_celda_2">
                               <td height="20" colspan="5" align="center" class="text_negro">Se encuentra incluido dentro del RUPD</td>
                             </tr>
@@ -383,7 +392,7 @@ a&ntilde;os
                             <tr class="fondo_celda_5">
                               <td height="20" colspan="5" align="center" class="text_negro"><%=rs.getString("perrelacion")%></td>
                             </tr>
-                            <tr class="fondo_celda_2">
+							<tr class="fondo_celda_2">							
                               <td height="20" align="center" class="text_negro">Ha iniciado acciones juridicas previas</td>
                               <td height="20" colspan="4" align="center" class="text_negro">Cuales</td>
                             </tr>
@@ -409,6 +418,7 @@ a&ntilde;os
                             <tr class="fondo_celda_5">
                               <td height="20" colspan="5" align="center" class="text_negro"><%=rs.getString("perasesoria")%></td>
                             </tr>
+							<%}%>
                             <tr class="fondo_celda_1" >
                               <td height="25" colspan="5" align="center" class="text_blanco"><span class="Estilo6">BREVE EXPOSICION DE LA CONSULTA</span></td>
                             </tr>
@@ -469,7 +479,9 @@ a&ntilde;os
                               <td align="center" class="text_negro">Apellido</td>
                               <td height="20" colspan="3" align="center" class="text_negro">Documento de Identificacion</td>
                             </tr>
-                            <%String es=rs.getString("estuid");							
+							
+                     <!--   ---------------Del PEriodo 12011 en adelante --> 
+	                        <%String es=rs.getString("estuid");							
 							if(es==null){%>							
 							 <tr class="fondo_celda_5">
                              <td height="20" colspan="6"align="center" class="text_negro">No posee Abogado Asignado</td>
@@ -483,8 +495,9 @@ a&ntilde;os
                               <td height="20"align="center" class="text_negro"><%=ress.getString("nombre")%></td>
                               <td align="center" class="text_negro"><%=ress.getString("apellido")%></td>
                               <td height="20" colspan="4" align="center" class="text_negro"><%=ress.getString("identificacion")%></td>
-                            </tr><%}%>
-                            
+                            </tr>
+							<%}%>
+                      <!--  -------------------------------------------------------------- -->       
                             <tr class="fondo_celda_1">
                               <td height="23" colspan="5"align="center" class="text_blanco"><span class="Estilo6">ABOGADO EN FORMACION QUE SISTEMATIZA </span></td>
                             </tr>

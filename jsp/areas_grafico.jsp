@@ -8,6 +8,7 @@ if(sesion==null || sesion.equals("false")){
 }
 try{
 String periodo=String.valueOf(request.getParameter("periodo"));
+String print=String.valueOf(request.getParameter("print"));
 int y=0;
 int cont2=0;
 Conex con = new Conex();	
@@ -49,8 +50,13 @@ if(cont!=0){
 %>
 <link href="css/estilo.css" rel="stylesheet" type="text/css"> 
 <script type="text/javascript" src="jScripts/jsapi.js"></script>
+	<%if(print.equals("1")){%>
 <script type='text/javascript' src='Scripts/jquery.min.js'></script>
+<%}%>
 <script type="text/javascript" src="jquery/jquery.gvChart-1.1.min.js"></script>
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href="images/estilo.css" rel="stylesheet" type="text/css">
+<link href="css/estilo.css" rel="stylesheet" type="text/css"> 
 <script type='text/javascript'> 
 window.onload = detectarCarga; 
 function detectarCarga(){ 
@@ -95,9 +101,30 @@ document.getElementById("imgLOAD").style.display="none";
 		
 		});
 		</script>
+		<%if(print.equals("1")){%>
+<div align="center" >
+<br/>
+<table>
+<tr>
+	<td><img src="images/unipamplona.png" width="70px" height="85px"/></td>
+	<td class="text_negro" style="font-size:12px; color:#036; font-family:"trebuchet MS", tahoma, arial;">UNIVERSIDAD DE PAMPLONA<br/>
+  FACULTAD DE ARTES Y HUMANIDADES<br/>
+  PROGRAMA DE DERECHO Y JURISPRUDENCIA<br/>
+  CONSULTORIO JURIDICO<br/>
+SEDE VILLA DEL ROSARIO
+	</td>
+</tr>
+</table>
+</div>
+<%}%>
         <table id='myTable5'>
-				<h1>Crecimiento Recepcion de Casos Por Area  -  TOTAL: <%=total%>  Casos Recibidos 
-                <% if(periodo.equals("0")){%>
+			<%if(print.equals("1")){%>
+				<h1 style="font-size:12px; color:#036; font-family:"trebuchet MS", tahoma, arial;">Crecimiento Recepcion de Casos Por Area  -  TOTAL: <%=total%>  Casos Recibidos 
+             <%}else{%>
+			 <h1 style="font-size:16px; color:#036; font-family:"trebuchet MS", tahoma, arial;">Crecimiento Recepcion de Casos Por Area  -  TOTAL: <%=total%>  Casos Recibidos 
+           
+				<%}%>
+			   <% if(periodo.equals("0")){%>
                 en todos los Periodos
                 <%} if(!periodo.equals(null) && !periodo.equals("0")){  %>
                 en el Periodo <%=periodo%>
@@ -121,8 +148,13 @@ document.getElementById("imgLOAD").style.display="none";
 				</tbody>
 			</table>
             <% if(!periodo.equals(null) && !periodo.equals("0")){%>
-            <h3>Grafico de Radicados Recepcionados por <br/> Areas seg&uacute;n el Periodo: <%=periodo%>  Contra el Global</h3> 
-               <%}%> 
+			<%if(print.equals("1")){%>
+            <h3 style="font-size:12px; color:#036; font-family:"trebuchet MS", tahoma, arial;">Grafico de Radicados Recepcionados por <br/> Areas seg&uacute;n el Periodo: <%=periodo%>  Contra el Global</h3> 
+             <%}else{%>
+			 <h3 style="font-size:16px; color:#036; font-family:"trebuchet MS", tahoma, arial;">Grafico de Radicados Recepcionados por <br/> Areas seg&uacute;n el Periodo: <%=periodo%>  Contra el Global</h3> 
+         
+				<%}%>
+			   <%}%> 
 			<table id='myTable1'>				
 				<thead>
 					<tr>
@@ -178,6 +210,11 @@ document.getElementById("imgLOAD").style.display="none";
 				</tbody>              
 			</table>     
 	   </body>
+<%if(print.equals("1")){%>
+	<script>	  setTimeout ("window.print();", 1000); </script>
+<br/><br/><br/>
+<h1 style="font-size:10px; color:#036; font-family:"trebuchet MS", tahoma, arial;" >HERsoft Gestion Documental - version 4.1</h1>
+<%}%>
 <%}catch(Exception e){
 		String error=e.toString(); 
 		session.setAttribute("error",error);

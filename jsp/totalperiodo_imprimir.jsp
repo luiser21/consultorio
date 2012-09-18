@@ -13,6 +13,7 @@ Conex confechas = new Conex();
 ResultSet  rsfechas = confechas.consultar("SELECT Min(perfecha) as min, Max(perfechafinal) as max FROM periodo where perid='"+periodo+"'");	
 rsfechas.next();
 
+ String max=rsfechas.getString("max");
 ResultSet  per=null;
  String consultaper = "select * from periodo where perid='"+periodo+"'";		
 			per = conper.consultar(consultaper);
@@ -32,25 +33,31 @@ ResultSet  per=null;
 </head>
 <body onload="window.print()" >
 <div id="texto_contenido">
-<div align="center">
-<p class="text_negro">UNIVERSIDAD DE PAMPLONA<br/>
+<div align="center" >
+<br/>
+<table>
+<tr>
+	<td><img src="images/unipamplona.png" width="70px" height="85px"/></td>
+	<td class="text_negro" style="font-size:12px; color:#036; font-family:"trebuchet MS", tahoma, arial;">UNIVERSIDAD DE PAMPLONA<br/>
   FACULTAD DE ARTES Y HUMANIDADES<br/>
   PROGRAMA DE DERECHO Y JURISPRUDENCIA<br/>
   CONSULTORIO JURIDICO<br/>
-SEDE VILLA DEL ROSARIO<br/>
-
-</DIV>
+SEDE VILLA DEL ROSARIO
+	</td>
+</tr>
+</table>
+</div>
     <h1 style="color:#036; font-size:20px;" class="text_negro">INFORME POR PERIODO LECTIVO: <br/> <%=semestre%> Semestre  del A&ntilde;o <%=ano%></h1>
-<table width="600" border="0" cellspacing="0" cellpadding="0">
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
       <tr>
         <td>
  </td>
       </tr>
       <tr>
-        <td height="91"><table width="600" border="0" align="center" cellpadding="1" cellspacing="0"  class="fondo_tabla">
+        <td height="91"><table width="600" border="1" align="center" cellpadding="0" cellspacing="0"  class="fondo_tabla">
                   <tr>
                     <td valign="top" height="17">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
+                      <table width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="ffffff">
                         <tr class="fondo_celda_1">
                           <td height="20" colspan="13" align="center" class="text_blanco">Listado de Totales </td>
                         </tr>
@@ -182,8 +189,8 @@ SEDE VILLA DEL ROSARIO<br/>
 							%>
                         <tr class="fondo_celda_5">
                           <td height="20" colspan="8" align="center" class="text_negro" ><div align="center"><%= opes[i][0] %></div></td>
-                          <td height="20" colspan="5" class="text_negro"><div align="center">Desde el&nbsp;&nbsp;<%					  
-						  out.print(rsfechas.getString("min")); %>&nbsp;&nbsp;Hasta el&nbsp;&nbsp;<%=rsfechas.getString("max") %></div></td>
+                          <td height="20" colspan="6" class="text_negro"><div align="center">Desde el&nbsp;&nbsp;<%	out.print(rsfechas.getString("min")); %>&nbsp;&nbsp; <%if(max==null){%>A la actualidad<%}else{%>Hasta el&nbsp;&nbsp;<% out.print(rsfechas.getString("max")); }%>
+					</div></td>
 						  </tr>
 								
                           <tr class="fondo_celda_1">
@@ -613,6 +620,7 @@ SEDE VILLA DEL ROSARIO<br/>
             </table>
 </div>
 <p>&nbsp;</p>
+<h1 style="font-size:10px; color:#036; font-family:"trebuchet MS", tahoma, arial;" >HERsoft Gestion Documental - version 4.1
 </body></html>
 <%}catch(Exception e){
 		String error=e.toString(); 
