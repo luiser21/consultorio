@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-09-18 16:19:46 Hora est. del Pacífico de SA
+-- Started on 2012-09-22 15:55:01 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -51,7 +51,7 @@ INSERT INTO estudianteperiodo (codigo, estudiante, periodo) VALUES (34, 43, '220
 INSERT INTO estudianteperiodo (codigo, estudiante, periodo) VALUES (35, 55, '22011');
 
 
--- Completed on 2012-09-18 16:19:47 Hora est. del Pacífico de SA
+-- Completed on 2012-09-22 15:55:02 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
