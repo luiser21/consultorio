@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-09-22 15:55:01 Hora est. del Pacífico de SA
+-- Started on 2012-09-27 15:55:01 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -840,8 +840,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (737, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (452, 168, 'PUBLICA', '12012', 28);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (712, 233, 'PUBLICA', '12012', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (577, 199, 'PRIVADA', '12012', 1);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (744, 241, 'PUBLICA', '12012', 3);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (736, 239, 'PUBLICA', '12012', 12);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (576, 199, 'PUBLICA', '12012', 12);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (724, 236, 'PUBLICA', '12012', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (428, 162, 'PUBLICA', '12012', 21);
@@ -856,9 +854,11 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (633, 2
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (665, 221, 'PRIVADA', '12012', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (644, 216, 'PUBLICA', '12012', 11);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (624, 211, 'PUBLICA', '12012', 9);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (744, 241, 'PUBLICA', '12012', 4);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (736, 239, 'PUBLICA', '12012', 13);
 
 
--- Completed on 2012-09-22 15:55:01 Hora est. del Pacífico de SA
+-- Completed on 2012-09-27 15:55:01 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
