@@ -12,10 +12,10 @@ Conex con = new Conex();
 boolean flag=false;
 
 
-ResultSet  rs = con.consultar("SELECT count(*) as p FROM periodo where (periodo.activo='0' and periodo.perfechafinal is null) or (periodo.activo='0' and periodo.perfechafinal is not  null) or (periodo.activo='1' and periodo.perfechafinal is  null)");		
+/*ResultSet  rs = con.consultar("SELECT count(*) as p FROM periodo where (periodo.activo='0' and periodo.perfechafinal is null) or (periodo.activo='0' and periodo.perfechafinal is not  null) or (periodo.activo='1' and periodo.perfechafinal is  null)");		
 rs.next();
 int per=Integer.parseInt(rs.getString("p"));
-
+*/
 
 
 %>
@@ -83,8 +83,8 @@ function volver(frm){
 <form name="form1" method="post">
   <div align="right" style="width:477px">
  <input name="" type="button" class="botones" value=" Atras " onclick="javascript:volver(document.forms['form1']);"></div>
- <%if(per>0){%>  
- <table width="350" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
+ <%//if(per>0){%>  
+ <!-- <table width="350" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
                   <tr>
                     <td valign="top" height="17">
                       <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="ffffff">
@@ -102,8 +102,8 @@ function volver(frm){
                     <td height="17" align="right" valign="top" class="fondo_celda_3">&nbsp;</td>
                   </tr>              
                 </table>
-                
-     <%}else{%>           
+                 -->
+     <%//}else{%>           
   <table width="350" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
                   <tr>
                     <td valign="top" height="17">
@@ -147,7 +147,7 @@ function volver(frm){
                      </td>
                   </tr>              
                 </table>
-                <%}%>
+                <%//}%>
                 
                 &nbsp;</p>
   <p>&nbsp;</p>
@@ -166,7 +166,7 @@ function volver(frm){
 	</tbody></table>
     
 </div>
-<%if(per==0){%>
+<%//if(per==0){%>
 <script type="text/javascript">
             Calendar.setup({
               inputField: 	"cal-field-2",
@@ -175,7 +175,7 @@ function volver(frm){
 			  button:		"cal-button-2"
             });
           </script>
-<%}%>
+<%//}%>
 <jsp:include page="botoom.jsp" />
 </body></html>
 <%}catch(Exception e){
