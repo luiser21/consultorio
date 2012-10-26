@@ -200,11 +200,12 @@ rs.beforeFirst();
 										<% min=min+2;
 										y=y+1;
 									}if(k>1){									   
-									   for(int x=min; x<opes[ii][0];x++){%>
+									   for(int x=min; x<opes[ii][0];x++){
+									   y=y+1; %>
 												 <%=x%> -  
 									<%}
 									   min=min+k+1;
-									   y=y+1;
+									   //y=y+1;
 								    }
 								}
 							
@@ -217,7 +218,7 @@ rs.beforeFirst();
 								No hay registros del Periodo
 					  <%}%></td>
 								   </tr>
-							
+							Total:  <%=y%> <hr />
 							  </table></td>
 							</tr><%
 							con.close();
