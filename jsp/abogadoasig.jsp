@@ -7,9 +7,19 @@ if(sesion==null || sesion.equals("false")){
    response.sendRedirect("login.jsp");
 }
 try{
+int exito=0;
 Conex con = new Conex();
 String periodo=String.valueOf(request.getParameter("periodo"));
 String buscar=String.valueOf(request.getParameter("buscar"));
+String satisfactorio=String.valueOf(request.getParameter("exito"));
+if(satisfactorio!= "null"){
+	exito=Integer.valueOf(satisfactorio).intValue();
+}
+Conex asignacion=new Conex();
+ResultSet  asignacionrs = asignacion.consultar("select  count(*) as numero from asignacion where periodo='"+periodo+"' ");	
+asignacionrs.next();
+int cantidadasig=Integer.valueOf(asignacionrs.getString("numero")).intValue();
+
 int contador;
 Conex conn = new Conex();
 Conex conact = new Conex();
@@ -219,10 +229,17 @@ function actionChange2(actionName, fileID)
   <div class="actualizacion">Administrador - Consultorio</div>
   <h1>Abogados en Formacion Activos y en Reparto</h1>
   <p></p><br/>
+  <%if(exito==1){%>
+   <div id="msgBox_info" class="notification information png_bg">
+					<div>
+                   El Proceso de Asignacion de Estudiantes a las Areas se Realizo Exitosamente </div>
+				</div>
+	<%}%>			
    <div id="msgBox_info" class="notification information png_bg">
 					<div>
                     Puede buscar un estudiante por numero de cedula, nombres y apellidos </div>
 				</div>
+				
   <div id="texto_contenido">
  
 <form name="form1" method="post">
@@ -234,7 +251,11 @@ function actionChange2(actionName, fileID)
                   <input name="submit2" type="reset" class="botones" value=" Limpiar " onClick="javascript:cargar(document.forms['form1']);"/>
                   				   <strong class="text_negro">PERIODO  <%=periodo%></strong>
   <div align="right" style="width:604px"></div><br/>
-  	<div align="right" style=" padding-bottom:1px;"> 		 <%if(contt!=0){%>
+  	<div align="right" style=" padding-bottom:1px;"> 		
+	<%if(cantidadasig==0){%>
+<input name="input" type="button" class="botones" onClick="javascript: window.location='asignacion.jsp?periodo=<%=periodo%>'"  value="Asignacion Automatica"/>
+<%} asignacion.close();%>
+	 <%if(contt!=0){%>
 				  <input name="input" type="button" class="botones" onClick="javascript:exportar(document.forms['form1'])"  value=" Exportar a Excel " />
                 
                  		
@@ -252,6 +273,7 @@ function actionChange2(actionName, fileID)
                 	<input name="Input3" type="button" onClick="javascript:agregar(document.forms['form1']);" class="botones" value="  Agregar ">
                   </div>
                   <%}%>
+
 <table width="600" border="0" align="center" cellpadding="1" cellspacing="0" class="fondo_tabla">
    				  <tr>				  
                     <td valign="top" height="17" >
