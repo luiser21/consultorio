@@ -252,7 +252,7 @@ function actionChange2(actionName, fileID)
                   				   <strong class="text_negro">PERIODO  <%=periodo%></strong>
   <div align="right" style="width:604px"></div><br/>
   	<div align="right" style=" padding-bottom:1px;"> 		
-	<%if(cantidadasig==0){%>
+	<%if(cont>1 && cantidadasig==0){%>
 <input name="input" type="button" class="botones" onClick="javascript: window.location='asignacion.jsp?periodo=<%=periodo%>'"  value="Asignacion Automatica"/>
 <%} asignacion.close();%>
 	 <%if(contt!=0){%>
