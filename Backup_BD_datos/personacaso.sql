@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2012-10-29 15:55:00 Hora est. del Pacífico de SA
+-- Started on 2012-10-30 15:55:00 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -11,8 +11,8 @@ SET client_min_messages = warning;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2300 (class 0 OID 17279)
--- Dependencies: 1955
+-- TOC entry 2302 (class 0 OID 17279)
+-- Dependencies: 1956
 -- Data for Name: personacaso; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3757,7 +3757,7 @@ FOTOCOPIA DEL RUPD', 'IBETH ', 'ZULIMA ESTRADA', '37399247', NULL, NULL, NULL, '
 INSERT INTO personacaso (perradicado, perfecha, perhora, pernombre, perapellido, persexo, peredad, pernacionalidad, perdocumento, pertipodocumento, perlugarexpedicion, perlibretamilitar, pernumerolibreta, perdistritomilitar, perdireccion, pertelefono, peremail, persisben, pernumero, perdiscapacidad, pertipodisca, pergrupoetnico, percualetnico, pernivelescola, percualnivel, pertipofamilia, permodofamil, pernumfamilia, perestadocivil, perconyuge, perallegado, perfijo, perdireccionalle, percelular, perautoridad, persanciona, peraporte, perconflictos, perfactor, parautor, pervivienda, pertenencia, peragua, perluz, peralcantarillado, paralumbrado, pertelefonos, peraseo, perocupacion, perlabora, persalario, pertipotra, perempresa, perclase, persalud, perpension, perarp, perotro, perocupaconyu, perdesplazado, perlugardes, perfechades, permotivo, perarmado, pergrupo, perrupd, perrelacion, perjuridica, percuales, permodalidad, percaso, perasesoria, perexposicion, perarea, perobservaciones, perdocumentos, perabogado, perapeabog, perdocu, perabogados, perapeabogs, perdocus, perabogadoss, perapeabogss, perdocuss, perrecibido, perid, estuid, municipio, embarazada, perrango, created, created_hora, modified, modified_hora) VALUES (1254, '28/06/2012', '17:39:50', 'MARTHA', 'CARRILLO', 'FEMENINO', '37', 'COLOMBIANA', '60422565', 'CC', 'CUCUTA', 'NO POSEE', '', '', 'AV 4 E NUMERO 14 B CORALINAS', '3145449565', 'No POSEE', 'SI', 'UNO', 'NO', '', 'NO', '', 'SECUNDARIA', '', 'NO POSEE', 'ESTABLE ', '2', 'CASADO', 'JAVIER PEREIRA', 'JAVIER PEREIRA', '', 'AV 4 E NUMERO 14 B CORALINAS', '3125833583', 'ESPOSO', 'ESPOSO', '300000', 'OCASIONAL', 'ECONOMICO', 'PADRE-MADRE', 'RANCHO', 'ARRENDADA', 'Agua', 'Luz', 'Alcantarillado', 'Alumbrado Publico', 'null', 'Recoleccion de Aseo', 'NO POSEE', 'NO', '000', 'NO', '', 'NO POSEE', 'null', 'null', 'null', 'null', 'VENDEDOR AMBULANTE', 'NO', '', '', '', '', '', '', '', 'NO', '', '', '', '', 'LA USUARIA MANIFIESTA QUE ES DAMNIFICADA DE UN BARRIO Y SE ENCUENTRA COBIJADA BAJO EL PROGRAMA DE DAMNIFICADOS CON EL PAGO DE ARRIENDO ACTUALMENTE, SOLICITA QUE SE LE ASIGNE UNA VIVIENDA YA QUE ESE FUE EL COMPROMISO CUANDO LOS SACARON DEL BARRIO. ', 'PUBLICA', 'NINGUNA', '', 'FANNY ', 'VEGA', '6039942', NULL, NULL, NULL, 'MARTHA YESENIA ', 'ORTIZ JAIMES', '1094268199', 'NO', '12012', NULL, 'CUCUTA', 'NO', '25 - 35 anos', '2012-10-25', '17:39:50.328', '2012-10-25', '17:39:50.328');
 
 
--- Completed on 2012-10-29 15:55:02 Hora est. del Pacífico de SA
+-- Completed on 2012-10-30 15:55:00 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
