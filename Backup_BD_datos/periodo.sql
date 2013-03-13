@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2013-01-25 15:55:02 Hora est. del Pacífico de SA
+-- Started on 2013-03-12 15:55:02 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -21,9 +21,10 @@ INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo
 INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo) VALUES ('22011', 2, 2011, '2011-08-09', '2012-03-08', 1);
 INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo) VALUES ('12012', 1, 2012, '2012-04-09', '2012-08-04', 0);
 INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo) VALUES ('22012', 2, 2012, '2012-09-11', '2012-12-21', 0);
+INSERT INTO periodo (perid, persemestre, perano, perfecha, perfechafinal, activo) VALUES ('12013', 1, 2013, '2013-02-11', NULL, 0);
 
 
--- Completed on 2013-01-25 15:55:02 Hora est. del Pacífico de SA
+-- Completed on 2013-03-12 15:55:02 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
