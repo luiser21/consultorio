@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2013-04-23 15:55:04 Hora est. del Pacífico de SA
+-- Started on 2013-05-09 15:55:02 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -11,8 +11,8 @@ SET client_min_messages = warning;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 2297 (class 0 OID 124683)
--- Dependencies: 1964
+-- TOC entry 2311 (class 0 OID 124683)
+-- Dependencies: 1972
 -- Data for Name: estudianteperiodo; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -51,7 +51,7 @@ INSERT INTO estudianteperiodo (codigo, estudiante, periodo) VALUES (34, 43, '220
 INSERT INTO estudianteperiodo (codigo, estudiante, periodo) VALUES (35, 55, '22011');
 
 
--- Completed on 2013-04-23 15:55:04 Hora est. del Pacífico de SA
+-- Completed on 2013-05-09 15:55:02 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete
