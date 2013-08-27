@@ -558,7 +558,7 @@ a&ntilde;os
                                 <option value="PASAPORTE">Pasaporte</option>
                               </select></td>
                               <td height="20" align="center" class="text_negro"><input type="text" name="documento"  size="20"  class="validate[required,custom[integer]] text_file" onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);"/></td>
-                              <td height="20" align="center" class="text_negro"><input type="text"  name="lugarexpedicion"  size="20" class="validate[required] text_file" onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);this.value=this.value.toUpperCase();"/></td>
+                              <td height="20" align="center" class="text_negro"><input type="text"  name="lugarexpedicion"  size="20"  onChange="javascript:while(''+this.value.charAt(0)==' ')this.value=this.value.substring(1,this.value.length);this.value=this.value.toUpperCase();"/></td>
                               <td height="20" align="center" class="text_negro"><select name="nacionalidad"  class="validate[required] combos" >
                                
                                 <option value="COLOMBIANA">COLOMBIANA</option>
