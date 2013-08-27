@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2013-06-16 15:55:02 Hora est. del Pacífico de SA
+-- Started on 2013-08-27 15:55:02 Hora est. del Pacífico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -1429,7 +1429,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1427, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1429, 414, 'PRIVADA', '12013', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1430, 415, 'LABORAL', '12013', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1432, 415, 'PUBLICA', '12013', 0);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1434, 416, 'LABORAL', '12013', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1435, 416, 'PENAL', '12013', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1437, 416, 'PRIVADA', '12013', 0);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1438, 417, 'LABORAL', '12013', 0);
@@ -1686,7 +1685,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1537, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1597, 456, 'PRIVADA', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1388, 404, 'PUBLICA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1497, 431, 'PRIVADA', '12013', 1);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1396, 406, 'PUBLICA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1580, 452, 'PUBLICA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1589, 454, 'PRIVADA', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1525, 438, 'PRIVADA', '12013', 1);
@@ -1727,7 +1725,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1591, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1370, 400, 'LABORAL', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1600, 457, 'PUBLICA', '12013', 3);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1433, 415, 'PRIVADA', '12013', 2);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1416, 411, 'PUBLICA', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1590, 455, 'LABORAL', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1436, 416, 'PUBLICA', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1639, 467, 'PENAL', '12013', 3);
@@ -1735,7 +1732,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1592, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1725, 488, 'PRIVADA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1532, 440, 'PUBLICA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1384, 403, 'PUBLICA', '12013', 4);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1404, 408, 'PUBLICA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1737, 491, 'PRIVADA', '12013', 14);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1381, 402, 'PRIVADA', '12013', 3);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1496, 431, 'PUBLICA', '12013', 1);
@@ -1746,7 +1742,6 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1596, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1625, 463, 'PRIVADA', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1549, 444, 'PRIVADA', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1508, 434, 'PUBLICA', '12013', 4);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1428, 414, 'PUBLICA', '12013', 5);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1539, 442, 'PENAL', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1683, 478, 'PENAL', '12013', 2);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1489, 429, 'PRIVADA', '12013', 2);
@@ -1754,11 +1749,16 @@ INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1705, 
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1541, 442, 'PRIVADA', '12013', 3);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1703, 483, 'PENAL', '12013', 1);
 INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1701, 482, 'PRIVADA', '12013', 4);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1452, 420, 'PUBLICA', '12013', 14);
-INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1380, 402, 'PUBLICA', '12013', 16);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1396, 406, 'PUBLICA', '12013', 3);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1428, 414, 'PUBLICA', '12013', 6);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1434, 416, 'LABORAL', '12013', 1);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1404, 408, 'PUBLICA', '12013', 6);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1416, 411, 'PUBLICA', '12013', 2);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1452, 420, 'PUBLICA', '12013', 16);
+INSERT INTO asignacion (codigo, estudiante, area, periodo, casos) VALUES (1380, 402, 'PUBLICA', '12013', 39);
 
 
--- Completed on 2013-06-16 15:55:02 Hora est. del Pacífico de SA
+-- Completed on 2013-08-27 15:55:02 Hora est. del Pacífico de SA
 
 --
 -- PostgreSQL database dump complete

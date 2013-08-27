@@ -216,9 +216,9 @@ var s = "no";
 	}else if(!esNumero(frm.documento.value)){	
 		alert("El Documento de Identidad debe ser Numerico.");
 		frm.documento.focus();		
-	}else if(esVacio(frm.lugarexpedicion.value)){	
+	/*}else if(esVacio(frm.lugarexpedicion.value)){	
 		alert("Debe ingresar el Lugar de Expedicion del Documento.");
-		frm.lugarexpedicion.focus();	
+		frm.lugarexpedicion.focus();	*/
 	}else if(esVacio(frm.nacionalidad.value)){	
 		alert("Debe ingresar la nacionalidad.");
 		frm.nacionalidad.focus();		
