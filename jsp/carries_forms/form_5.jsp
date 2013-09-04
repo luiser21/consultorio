@@ -60,8 +60,10 @@ function redireccionar(objeto){
            <option value="../abogadoasig.jsp?periodo=<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
 						<%}if(id.equals("7")){%>
            <option value="../casos.jsp?periodo=<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
-          				 <%}if(id.equals("8")){%>
+          				<%}if(id.equals("8")){%>
            <option value="../buscar_todos.jsp?periodo=<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
+						<%}if(id.equals("9")){%>
+           <option value="../upload.jsp?periodo=<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
          				<%}if(id.equals("1")){%>
            <option value="../totalperiodo.jsp?periodo=<%=opes[i][0]%>"><%=opes[i][1]%> Semestre del a&ntilde;o <%=opes[i][2]%> </option> 
            				<%}if(id.equals("2")){%>
