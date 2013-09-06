@@ -480,7 +480,7 @@ var s = "no";
                               <td  rowspan="2"  align="center" class="text_blanco"><span>RADICADO No. 
                                 <%
 						  ResultSet  rs_contar=null;						  
-						  String consulta_contar = "select count(perradicado) as radicados from personacaso";
+						  String consulta_contar = "select count(perradicado) as radicados from personacaso, periodo WHERE periodo.perid = personacaso.perid and periodo.perano=(select perano from periodo where perid='"+periodo+"')";
 						  rs_contar = con.consultar(consulta_contar);
 						  rs_contar.next();		
 						  String numero_radi=rs_contar.getString("radicados");
@@ -490,7 +490,7 @@ var s = "no";
 							 if(contar_radi!=0){				
 							  
 								  ResultSet  rs=null;
-								  String consulta = "select max(perradicado) as radicado from personacaso";	
+								  String consulta = "select max(perradicado) as radicado from personacaso, periodo WHERE periodo.perid = personacaso.perid and periodo.perano=(select perano from periodo where perid='"+periodo+"')  ";	
 								  rs = con.consultar(consulta);
 								  rs.next();							
 								  String numero=rs.getString("radicado");

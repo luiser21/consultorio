@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2013-09-04 15:55:02 Hora est. del Pac�fico de SA
+-- Started on 2013-09-05 15:55:03 Hora est. del Pac�fico de SA
 
 SET client_encoding = 'SQL_ASCII';
 SET check_function_bodies = false;
@@ -469,9 +469,103 @@ INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, obser
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (490, '91082805090', 'DIANA MARCELA', 'ROLON PACHECO', 'SI', NULL, 'SI', '12013');
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (491, '91062806015', 'YURLEY ATHERINE', 'SANCHEZ GONZALEZ', 'SI', NULL, 'SI', '12013');
 INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (492, '91051220850', 'MARIA ANDREA', 'SANGUINO ROMERO', 'SI', NULL, 'SI', '12013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (493, '1090466694', 'MARVIN SANTIAGO', 'TELLEZ ANGULO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (494, '1092351908', 'KAREN AMALFI', 'BAYONA PEREZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (495, '1090450034', 'JHON EDINSON', 'CAICEDO RANGEL', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (496, '1092353906', 'VIVIANA ', 'CARRILLO QUNITERO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (497, '1090479753', 'KAREN JULIETH', 'CASTRO FLOREZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (498, '1090405263', 'JORGE HERNANDO', 'CUBEROS HERNANDEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (499, '60372619', 'KELIANA  ', 'ESCOBAR MORENO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (500, '1093758796', 'YEISY TATIANA', 'GONZALEZ RANGEL', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (501, '1090464826', 'GERSON DUVAN', 'GUTIERREZ GAMBOA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (502, '1094270174', 'YENI XIOMARA', 'JAIMES VERA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (503, '92060260895', 'LINA MARIA', 'LINDARTE RINCON', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (504, '1090399784', 'CHARLY  ', 'MENDOZA FLECHAS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (505, '1090466277', 'MARIA ALEJANDRA', 'MERCADO JAIMES', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (506, '1090451934', 'ADRIAN CAMILO', 'PAEZ IBARRA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (507, '1092353404', 'JHON JAIRO', 'POSSE CARREÑO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (508, '1092354424', 'ANDRY LORENA', 'QUINTERO RINCON', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (509, '1090464538', 'SEAR JASUB', 'RODRIGUEZ RIVERA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (510, '6663711', 'ALFREDO YERMAIN', 'TRUJILLO SALCEDO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (511, '1090468177', 'SANDRA DANIELA', 'HERNANDEZ PEÑARANDA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (512, '13441174', 'HENRY ALBERTO', 'SIERRA JAUREGUI', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (513, '1091805859', 'LUIS FERNANDO', 'PUERTO LAZARO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (514, '1090461659', 'LISETH PAOLA', 'JAIMES DURAN', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (515, '1090455102', 'YOHAN SEBASTIAN', 'GARCIA MONTENEGRO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (516, '1090443192', 'CARLOS FERNANDO', 'SANCHEZ VALENCIA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (517, '1094264658', 'LUIS ALEJANDRO', 'DUARTE CACERES', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (518, '1090424935', 'JENNIFER ALEXANDRA', 'BELTRAN UNIBIO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (519, '1127583300', 'MARIA FERNANDA', 'CARRERA CASTIBLANCO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (520, '1090434962', 'YEIDER DANILO', 'CASTILLO LONDOÑO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (521, '1065594639', 'IVAN DARIO', 'CORTES CASADIEGO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (522, '91032960940', 'LENIN JAVIER', 'DUARTE SUAREZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (523, '79720163', 'JHON JAIRO', 'ESTUPIÑAN JAIMES', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (524, '88175746', 'CARLOS ARTURO', 'FLÓREZ GÓMEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (525, '1093755661', 'ANDREA YELITZA', 'GALLO GARCÍA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (526, '1090428517', 'ADRIANA GRACIELA', 'GONZALEZ RIVERA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (527, '1093735474', 'CESAR ROBERTO', 'GUTIERREZ CASTRO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (528, '1090429386', 'KATHERIN VANNESSA', 'MORENO SANDOVAL', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (529, '37505990', 'JANETH JUDITH', 'NOSSA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (530, '1090388773', 'YARITHZA EMPERATRIZ', 'RANGEL SANGUINO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (531, '1090430542', 'MARIA DANIELA', 'ROZO DAZA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (532, '37180390', 'LAURA', 'SANTIAGO QUINTERO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (533, '1092343746', 'JUAN MANUEL', 'VELASQUEZ BONILLA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (534, '88207492', 'HUMBERTO', 'ARDILA VARGAS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (535, '1090368314', 'YESSIKA KAROLINA', 'BLANCO MONROY', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (536, '88215433', 'NELSON ENRIQUE', 'FERNANDEZ ALICASTRO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (537, '60362471', 'XIOMARA ALEXANDRA', 'GARCIA MARTINEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (538, '91282392', 'RAUL ENRIQUE', 'GOMEZ VELASCO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (539, '88247613', 'HENRY OMAR', 'GRIMALDO ROLÓN', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (540, '1090397443', 'SHIRLEY ANDREA', 'JAIMES ESCALANTE', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (541, '1090402759', 'LUCERO', 'MANTILLA BECERRA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (542, '5531930', 'HENRY', 'MARIN RODRIGUEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (543, '1092343605', 'MARTHA CECILIA', 'MARTINEZ MARTINEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (544, '1090438804', 'CHRISTIAN JAVIER', 'MIRANDA DUARTE', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (545, '13724052', 'EDGAR ALEJANDRO', 'ORTIZ OÑORO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (546, '1090442014', 'MELISSA IVETTE', 'PATERNINA VERA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (547, '1090371057', 'YULIETH', 'PEREZ CARRASCAL', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (548, '1090381269', 'JOSMANN ALEXIS', 'QUINTERO PÉREZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (549, '1090367392', 'WILMER HERNANDO', 'SANDOVAL GRIMALDO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (550, '60441507', 'YAMILE', 'TOLOZA RUIZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (551, '1006695803', 'MARIA JULIETH', 'TRASLAVIÑA FERRER', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (552, '60399421', 'FANNY', 'VEGA VARGAS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (553, '9467061', 'JAVIER', 'VILLAMIZAR CORONA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (554, '1092340127', 'TATIANA MARCELA', 'CAMACHO HERNANDEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (555, '1090396585', 'MARLON ORLANDO', 'DUARTE OROZCO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (556, '91032207826', 'DIEGO ANDRES', 'MENDOZA LAGUADO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (557, '1090399388', 'ANDRES FERNANDO', 'NARANJO JAIMES', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (558, '90062876874', 'JHOYNER ANDRES', 'OLIVOS ROZO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (559, '13388579', 'MANUEL ORLANDO', 'PRADILLA GARCIA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (560, '60358001', 'JINETH ELIZABETH', 'ACEVEDO BAUTISTA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (561, '1090408700', 'KELLYN ANDREA', 'ACOSTA RAMOS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (562, '1067714694', 'LUIS CESAR', 'BAUTISTA QUINTERO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (563, '1093751643', 'HENRY LEONARDO', 'DURAN ESTUPIÑAN', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (564, '91091277617', 'KEYLA STEFANY', 'DURAN RODRIGUEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (565, '92012703092', 'ELIANA MARIA', 'EUGENIO TORRADO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (566, '1127045219', 'VANESSA MARIBEL', 'JAIMES GUILLEN', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (567, '88308041', 'SUAREZ ALEXIS', 'LANDINEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (568, '1026270241', 'JUAN PABLO', 'MARTINEZ CAMARGO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (569, '37181828', 'LEIDY TORCOROMA', 'MEJIA VILA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (570, '90061057276', 'FARIDE IVANNA', 'OVIEDO MOLINA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (571, '88244779', 'JHON ALEXANDER', 'QUINTERO PATIÑO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (572, '92010855430', 'NONY CRISTINA', 'QUINTERO QUINTERO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (573, '1010194023', 'KELLY STEPHANY', 'SANCHEZ ORTIZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (574, '63486329', 'OLGA LUCIA', 'ZAMBRANO GARCIA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (575, '88270559', 'GUSTAVO HERNAN', 'ALFONSO VARGAS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (576, '1090444650', 'RAFAEL ENRIQUE', 'BAUTISTA POSSE', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (577, '1090415665', 'CRISTIAN HELI', 'CASANOVA PARADA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (578, '1093757200', 'JAVIER RICARDO', 'DUQUE SUAREZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (579, '13270823', 'MARLON ANTONIO', 'HERNANDEZ FERRER', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (580, '1091660343', 'FABIAN ANDRES', 'MARIN LEMUS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (581, '1090406269', 'IVAN JESUS', 'MONCADA QUIROGA', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (582, '1090448322', 'LISBETH YESENIA', 'PARDO CONTRERAS', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (583, '1092336135', 'DIEGO SEBASTIAN', 'ROLON ASCENCIO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (584, '91082805090', 'DIANA MARCELA', 'ROLON PACHECO', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (585, '91062806015', 'YURLEY ATHERINE', 'SANCHEZ GONZALEZ', 'SI', NULL, 'SI', '22013');
+INSERT INTO estudiantes (estuid, identificacion, nombre, apellido, activo, observacion, reparto, perid) VALUES (586, '91051220850', 'MARIA ANDREA', 'SANGUINO ROMERO', 'SI', NULL, 'SI', '22013');
 
 
--- Completed on 2013-09-04 15:55:02 Hora est. del Pac�fico de SA
+-- Completed on 2013-09-05 15:55:04 Hora est. del Pac�fico de SA
 
 --
 -- PostgreSQL database dump complete
