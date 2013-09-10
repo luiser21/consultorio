@@ -468,7 +468,7 @@ var elementos2 = document.getElementsByName(Fila2);
                         <tr class="<%= fondo %>">
 						 <%if(!periodo.equals("22010") && opes[ii][6]==null){ %>   
                           <td width="4%" align="center" class="text_negro" style=" background-color:#FF8080">
-<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
+<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>&m=<%=Math.random()%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
 <img src="img/list-remove.png" onclick="javascript:OcultarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>')" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>" style="display:none" title="Ocultar" style="cursor:pointer;"/>
 	 </td>                       
                           <td width="4%" height="20" align="center" class="text_negro" style=" background-color:#FF8080">
@@ -506,7 +506,7 @@ var elementos2 = document.getElementsByName(Fila2);
                           <td height="20" align="center" class="text_negro" style=" background-color:#FF8080"><img src="img/user-trash-full.png" width="14"  title="Eliminar Radicado" height="14" onclick='javascript:actionChange2("eliminar", "<%= opes[ii][0]%>", "<%=periodo%>")' style="cursor:pointer"/></td>
                           <%}}else{%>
 						   <td width="4%" align="center">
-<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
+<img src="img/list-add.png" onclick="javascript:MostrarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>'),llamadasin('carries_forms/form_11.jsp?id=<%= opes[ii][0] %>&periodo=<%=periodo%>&m=<%=Math.random()%>', 'contenido_<%=opes[ii][0]%>')" id="Op2_<%=opes[ii][0]%>" name="Op2_<%=opes[ii][0]%>" title="Ver Radicado" style="cursor:pointer;"/>
 <img src="img/list-remove.png" onclick="javascript:OcultarFilas('ajax_<%=opes[ii][0]%>','Op2_<%=opes[ii][0]%>')" id="ajax_<%=opes[ii][0]%>" name="ajax_<%=opes[ii][0]%>" style="display:none" title="Ocultar" style="cursor:pointer;"/>
 	 </td>                
    							  <td width="4%" height="20" align="center">

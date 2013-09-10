@@ -17,7 +17,7 @@ int edad=0;
 String periodo=String.valueOf(request.getParameter("periodo"));
 String radicado=String.valueOf(request.getParameter("id"));
 ResultSet  rs=null;
-String consulta = "select * from personacaso where perradicado='"+radicado+"'";		
+String consulta = "select * from personacaso where perradicado='"+radicado+"' and perid='"+periodo+"'";		
 	 rs = con.consultar(consulta);
 	rs.next();
 
