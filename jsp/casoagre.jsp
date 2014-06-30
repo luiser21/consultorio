@@ -496,9 +496,9 @@ var s = "no";
 								  String numero=rs.getString("radicado");
 								  contar=Integer.parseInt(numero)+1;
 		   				  %>
-					             &nbsp;&nbsp;<input name="codigo" type="text"  class="validate[required,custom[integer]] text_file" onFocus="javascript:prender();" onBlur="javascript:apagar();" value="<%=contar%>"   size="5" id="codigo">
+					             &nbsp;&nbsp;<input name="codigo" type="text"  class="validate[required,custom[integer]] text_file" onFocus="javascript:prender();" onBlur="javascript:apagar();" value="<%=contar%>"   size="5" id="codigo" maxlength="3">
                              <%}else{%>
-                                 &nbsp;&nbsp;<input name="codigo" type="text"  class="validate[required,custom[integer]] text_file" onFocus="javascript:prender();" onBlur="javascript:apagar();" value="<%=contar%>"   size="5" id="codigo">
+                                 &nbsp;&nbsp;<input name="codigo" type="text"  class="validate[required,custom[integer]] text_file" onFocus="javascript:prender();" onBlur="javascript:apagar();" value="<%=contar%>"   size="5" id="codigo" maxlength="3">
                              <%}%>
                              
                               </span></td>
